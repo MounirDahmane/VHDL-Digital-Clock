@@ -84,7 +84,62 @@ BEGIN
 		VARIABLE HourT	: NATURAL RANGE 0 to 3 ;
 		
 	BEGIN
-		END PROCESS;
+		IF(RST = '0') THEN
+			one_s := 0;
+			SecU	:= 0;	SecT 	:= 0;
+			MinU 	:= 0;	MinT  := 0;
+			HourU	:= 0;	HourT	:= 0;
+			
+		ELSIF(RISING_EDGE(Clk_Slow)) THEN -- (CLK_slow'Event and CLK_slow = '1')
+			--one_s := one_s + 1;
+			--IF(one_s = limit) THEN
+			--	one_s := 0;
+				--SecU := SecU + 1;
+				HourT := HourT + 1;
+				HourU := HourU + 1;
+				IF(SecU = 10) THEN
+					SecU := 0;
+					SecT := SecT + 1;
+					IF(SecT = 6) THEN
+						SecT := 0;
+						MinU := MinU + 1;
+						IF(MinU = 10) THEN
+							MinU := 0;
+							MinT := MinT + 1;
+							IF(MinT = 6) THEN
+								MinT := 0;
+								HourU := HourU + 1;
+								IF((HourT /= 2 AND HourU = 10) OR 
+									(HourT = 2 AND HourU = 4)) THEN
+									HourU := 0;
+									HourT := HourT + 1;
+									IF(HourT = 3) THEN
+										HourT := 0;
+									END IF;
+								END IF;
+							END IF;
+						END IF;
+					END IF;
+				END IF;
+			--END IF;
+		END IF;
+		
+		SecUnits  <= SecU	;
+		SecTens   <= SecT ;	
+		MinUnits  <= MinU ;	
+		MinTens   <= MinT ;
+		HourUnits <= HourU;	
+		HourTenst <= HourT;	
+	
+	END PROCESS;
+	
+	ssd_SecU  <= integer_to_SSD(SecUnits );
+	ssd_SecT  <= integer_to_SSD(SecTens  );
+	ssd_MinU  <= integer_to_SSD(MinUnits );
+	ssd_MinT  <= integer_to_SSD(MinTens  );
+	ssd_HourU <= integer_to_SSD(HourUnits);
+	ssd_HourT <= integer_to_SSD(HourTenst);
+	
 --ELSIF (mode = '1') THEN
 --
 --case Sel is
