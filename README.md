@@ -8,5 +8,3 @@ It displays **hours, minutes, and seconds** on **seven-segment displays (SSD)**.
 - **DE1-SoC FPGA Board (Cyclone V)**
 - **Quartus II 13.0 SP1**
 - **Seven-Segment Displays (HEX0 - HEX5)** for time display
-
-## 📜 File Structure
