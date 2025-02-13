@@ -2,7 +2,7 @@
 set_location_assignment PIN_D25 -to Clk
 
 # Reset  : KEY[0]
-set_location_assignment PIN_AA14 -to RST
+set_location_assignment PIN_AB12 -to RST
 
 # Assignments for speed factor to help visualing and debbuging
 
