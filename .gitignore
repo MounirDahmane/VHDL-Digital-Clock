@@ -1,28 +1,5 @@
-# Ignore Quartus-generated files
-db/
+# Quartus-generated files
 incremental_db/
+db/
+hc_output/
 output_files/
-simulation/
-*.rpt
-*.qws
-*.qsf_backup
-*.sof
-*.pof
-*.map
-*.fit
-*.asm
-*.hex
-*.jdi
-*.smsg
-*.eqn
-*.done
-*.bak
-
-# Ignore ModelSim/QuestaSim simulation files
-transcript
-vsim.wlf
-work/
-
-# Ignore backup files
-*.bak
-*~

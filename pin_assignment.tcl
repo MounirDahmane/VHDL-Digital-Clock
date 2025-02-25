@@ -1,15 +1,31 @@
 # 50 MHz clock input
-set_location_assignment PIN_D25 -to Clk
+set_location_assignment PIN_AF14 -to Clk
 
 # Reset  : KEY[0]
-set_location_assignment PIN_AB12 -to RST
+set_location_assignment PIN_AA14 -to RST
 
 # Assignments for speed factor to help visualing and debbuging
 
 # SW0
-set_location_assignment PIN_W15 -to SPEED_FAC[0] 
+set_location_assignment PIN_AB12 -to SPEED_FAC[0] 
 # SW1
-set_location_assignment PIN_AA15 -to SPEED_FAC[1]
+set_location_assignment PIN_AC12 -to SPEED_FAC[1]
+
+# Assignments for input that modifies the time
+
+# SW[2], SW[3], KEY[1], KEY[3]
+set_location_assignment PIN_AF9  -to ADJUST
+set_location_assignment PIN_AF10 -to SEL 		 	 	
+set_location_assignment PIN_AA15 -to SEL_EVENT 	
+set_location_assignment PIN_W15  -to ENTER_VALUE	
+
+# NEW_VALUE
+# SW[8] & SW[6..4]
+set_location_assignment PIN_AD11 -to NEW_VALUE[0]
+set_location_assignment PIN_AD12 -to NEW_VALUE[1]	
+set_location_assignment PIN_AE11 -to NEW_VALUE[2]
+set_location_assignment PIN_AD10 -to NEW_VALUE[3]	
+
 
 # Assignments for Seven-Segment Displays (HEX0 - HEX5) on DE1-SoC Board
 
