@@ -2,4 +2,16 @@
 incremental_db/
 db/
 hc_output/
-output_files/
+
+*.names_drv_tbl
+
+./output_files/
+
+*.qsf
+*.qpf
+*.qws
+
+# Temporary files
+*.bak
+*.tmp
+*.log
