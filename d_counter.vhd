@@ -119,23 +119,23 @@ BEGIN
 			HourU	:= 0;	HourT	:= 0;
 		ELSIF(RISING_EDGE(Clk)) THEN -- (CLK'Event and CLK = '1')
 			
-			max_limit(SecU, 9);	max_limit(MinU, 9);	max_limit(HourU, 9);
-			max_limit(SecT, 5);	max_limit(MinT, 5);	max_limit(HourT, 2);
-			IF(HourT > 1 and HourU > 3) THEN HourU := 3; END IF;
+			--max_limit(SecU, 9);	max_limit(MinU, 9);	max_limit(HourU, 9);
+			--max_limit(SecT, 5);	max_limit(MinT, 5);	max_limit(HourT, 2);
+			--IF(HourT > 1 and HourU > 3) THEN HourU := 3; END IF;
 			
 			IF(Qin = 50_000_000) THEN delay := TRUE; END IF;
 ---------------------------------------------------------------
-		IF(ADJUST = '1') THEN
+			IF(ADJUST = '1') THEN
 			
 			CASE PS IS
 			
 				WHEN IDLE => IF(SEL_EVENT = '1') THEN PS <= IDLE; ELSE PS <= SU; END IF;
-				WHEN SU   => SecU  := TO_INTEGER(UNSIGNED(NEW_VALUE)); IF(HourU > 3 AND HourT > 1) THEN HourT := 1; ELSIF(HourT > 2) THEN HourT := 2; END IF; IF(SEL_EVENT = '0' AND DELAY = TRUE) THEN PS <= ST; delay := FALSE; END IF;-- END IF;
-				WHEN ST   => SecT  := TO_INTEGER(UNSIGNED(NEW_VALUE)); IF(SecU  > 9) THEN SecU  := 9; END IF; IF(SEL_EVENT = '0' AND DELAY = TRUE) THEN PS <= MU; delay := FALSE; END IF;-- END IF;
-				WHEN MU   => MinU  := TO_INTEGER(UNSIGNED(NEW_VALUE)); IF(SecT  > 5) THEN SecT  := 5; END IF; IF(SEL_EVENT = '0' AND DELAY = TRUE) THEN PS <= MT; delay := FALSE; END IF;-- END IF;
-				WHEN MT   => MinT  := TO_INTEGER(UNSIGNED(NEW_VALUE)); IF(MinU  > 9) THEN MinU  := 9; END IF; IF(SEL_EVENT = '0' AND DELAY = TRUE) THEN PS <= HU; delay := FALSE; END IF;-- END IF;
-				WHEN HU   => HourU := TO_INTEGER(UNSIGNED(NEW_VALUE)); IF(MinT  > 5) THEN MinT  := 5; END IF; IF(SEL_EVENT = '0' AND DELAY = TRUE) THEN PS <= HT; delay := FALSE; END IF;-- END IF;
-				WHEN HT   => HourT := TO_INTEGER(UNSIGNED(NEW_VALUE)); IF(HourU > 9) THEN HourU := 9; END IF; IF(SEL_EVENT = '0' AND DELAY = TRUE) THEN PS <= SU; delay := FALSE; END IF;-- END IF;
+				WHEN SU   => SecU  := TO_INTEGER(UNSIGNED(NEW_VALUE)); IF(SecU  > 9) THEN SecU  := 9; END IF; IF(SEL_EVENT = '0' AND DELAY = TRUE) THEN PS <= ST; delay := FALSE; END IF;-- END IF;
+				WHEN ST   => SecT  := TO_INTEGER(UNSIGNED(NEW_VALUE)); IF(SecT  > 5) THEN SecT  := 5; END IF; IF(SEL_EVENT = '0' AND DELAY = TRUE) THEN PS <= MU; delay := FALSE; END IF;-- END IF;
+				WHEN MU   => MinU  := TO_INTEGER(UNSIGNED(NEW_VALUE)); IF(MinU  > 9) THEN MinU  := 9; END IF; IF(SEL_EVENT = '0' AND DELAY = TRUE) THEN PS <= MT; delay := FALSE; END IF;-- END IF;
+				WHEN MT   => MinT  := TO_INTEGER(UNSIGNED(NEW_VALUE)); IF(MinT  > 5) THEN MinT  := 5; END IF; IF(SEL_EVENT = '0' AND DELAY = TRUE) THEN PS <= HU; delay := FALSE; END IF;-- END IF;
+				WHEN HU   => HourU := TO_INTEGER(UNSIGNED(NEW_VALUE)); IF(HourU > 9) THEN HourU := 9; END IF; IF(SEL_EVENT = '0' AND DELAY = TRUE) THEN PS <= HT; delay := FALSE; END IF;-- END IF;
+				WHEN HT   => HourT := TO_INTEGER(UNSIGNED(NEW_VALUE)); IF(HourU > 3 AND HourT > 1) THEN HourT := 1; ELSIF(HourT > 2) THEN HourT := 2; END IF; IF(SEL_EVENT = '0' AND DELAY = TRUE) THEN PS <= SU; delay := FALSE; END IF;-- END IF;
 				
 			END CASE;
 			

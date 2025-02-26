@@ -1,12 +1,12 @@
-Fitter Status : Successful - Tue Feb 25 23:37:16 2025
+Fitter Status : Successful - Wed Feb 26 23:02:23 2025
 Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
 Revision Name : d_counter
 Top-level Entity Name : d_counter
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Preliminary
-Logic utilization (in ALMs) : 105 / 32,070 ( < 1 % )
-Total registers : 78
+Logic utilization (in ALMs) : 96 / 32,070 ( < 1 % )
+Total registers : 80
 Total pins : 54 / 457 ( 12 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )

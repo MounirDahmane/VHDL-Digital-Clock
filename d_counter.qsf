@@ -102,8 +102,6 @@ set_location_assignment PIN_AF9 -to ADJUST
 set_location_assignment PIN_AF10 -to SEL
 set_location_assignment PIN_AA15 -to SEL_EVENT
 set_location_assignment PIN_W15 -to ENTER_VALUE
-set_global_assignment -name VHDL_FILE d_counter1.vhd
-set_global_assignment -name VHDL_FILE Vhdl3.vhd
 set_location_assignment PIN_AD11 -to NEW_VALUE[0]
 set_location_assignment PIN_AD12 -to NEW_VALUE[1]
 set_location_assignment PIN_AE11 -to NEW_VALUE[2]
