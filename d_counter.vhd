@@ -1,9 +1,8 @@
--------------------------------------------------------------------
+------------------------- Digital-Clock-Using-DE1's-SSD's ------------------------------------------
 Library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.utils.all; -- INCLUDES THE SSD DRIVER FUNCTION : integer_to_SSD
-
 -----------------------------------------------------------------
 Entity d_counter is
 
