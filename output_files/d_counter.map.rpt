@@ -1,5 +1,5 @@
 Analysis & Synthesis report for d_counter
-Wed Feb 26 23:01:42 2025
+Fri Feb 28 16:20:48 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -43,14 +43,14 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +---------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Feb 26 23:01:42 2025      ;
+; Analysis & Synthesis Status     ; Successful - Fri Feb 28 16:20:48 2025      ;
 ; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                   ; d_counter                                  ;
 ; Top-level Entity Name           ; d_counter                                  ;
 ; Family                          ; Cyclone V                                  ;
 ; Logic utilization (in ALMs)     ; N/A                                        ;
-; Total registers                 ; 78                                         ;
-; Total pins                      ; 54                                         ;
+; Total registers                 ; 76                                         ;
+; Total pins                      ; 52                                         ;
 ; Total virtual pins              ; 0                                          ;
 ; Total block memory bits         ; 0                                          ;
 ; Total DSP Blocks                ; 0                                          ;
@@ -166,6 +166,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+-----------------+---------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                      ; Library ;
 +----------------------------------+-----------------+-----------------+---------------------------------------------------+---------+
+; utils.vhd                        ; yes             ; User VHDL File  ; C:/altera/13.1/Projects/24h counter/utils.vhd     ;         ;
 ; d_counter.vhd                    ; yes             ; User VHDL File  ; C:/altera/13.1/Projects/24h counter/d_counter.vhd ;         ;
 +----------------------------------+-----------------+-----------------+---------------------------------------------------+---------+
 
@@ -175,23 +176,23 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 95        ;
+; Estimate of Logic utilization (ALMs needed) ; 93        ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 162       ;
+; Combinational ALUT usage for logic          ; 158       ;
 ;     -- 7 input functions                    ; 6         ;
 ;     -- 6 input functions                    ; 22        ;
 ;     -- 5 input functions                    ; 16        ;
-;     -- 4 input functions                    ; 37        ;
-;     -- <=3 input functions                  ; 81        ;
+;     -- 4 input functions                    ; 36        ;
+;     -- <=3 input functions                  ; 78        ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 78        ;
+; Dedicated logic registers                   ; 76        ;
 ;                                             ;           ;
-; I/O pins                                    ; 54        ;
+; I/O pins                                    ; 52        ;
 ; Total DSP Blocks                            ; 0         ;
 ; Maximum fan-out node                        ; Clk~input ;
-; Maximum fan-out                             ; 78        ;
-; Total fan-out                               ; 1023      ;
-; Average fan-out                             ; 2.94      ;
+; Maximum fan-out                             ; 76        ;
+; Total fan-out                               ; 1002      ;
+; Average fan-out                             ; 2.96      ;
 +---------------------------------------------+-----------+
 
 
@@ -200,7 +201,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
-; |d_counter                 ; 162 (162)         ; 78 (78)      ; 0                 ; 0          ; 54   ; 0            ; |d_counter          ; work         ;
+; |d_counter                 ; 158 (158)         ; 76 (76)      ; 0                 ; 0          ; 52   ; 0            ; |d_counter          ; work         ;
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -210,10 +211,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 78    ;
-; Number of registers using Synchronous Clear  ; 54    ;
+; Total registers                              ; 76    ;
+; Number of registers using Synchronous Clear  ; 52    ;
 ; Number of registers using Synchronous Load   ; 5     ;
-; Number of registers using Asynchronous Clear ; 78    ;
+; Number of registers using Asynchronous Clear ; 76    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 47    ;
 ; Number of registers using Preset             ; 0     ;
@@ -226,10 +227,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; 10:1               ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |d_counter|SecU[3]         ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |d_counter|MinU[2]         ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |d_counter|HourU[0]        ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |d_counter|SecT[1]         ;
-; 11:1               ; 3 bits    ; 21 LEs        ; 6 LEs                ; 15 LEs                 ; Yes        ; |d_counter|MinT[2]         ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |d_counter|MinU[3]         ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |d_counter|HourU[1]        ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |d_counter|SecT[0]         ;
+; 11:1               ; 3 bits    ; 21 LEs        ; 6 LEs                ; 15 LEs                 ; Yes        ; |d_counter|MinT[0]         ;
 ; 12:1               ; 2 bits    ; 16 LEs        ; 6 LEs                ; 10 LEs                 ; Yes        ; |d_counter|HourT[0]        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
@@ -260,9 +261,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Feb 26 23:01:40 2025
+    Info: Processing started: Fri Feb 28 16:20:46 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off d_counter -c d_counter
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 0 entities, in source file utils.vhd
+    Info (12022): Found design unit 1: utils
+    Info (12022): Found design unit 2: utils-body
 Info (12021): Found 2 design units, including 1 entities, in source file d_counter.vhd
     Info (12022): Found design unit 1: d_counter-arch
     Info (12023): Found entity 1: d_counter
@@ -272,16 +276,13 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SEL"
-    Warning (15610): No output dependent on input pin "ENTER_VALUE"
-Info (21057): Implemented 242 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 12 input pins
+Info (21057): Implemented 236 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
     Info (21059): Implemented 42 output pins
-    Info (21061): Implemented 188 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info (21061): Implemented 184 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 4703 megabytes
-    Info: Processing ended: Wed Feb 26 23:01:42 2025
+    Info: Processing ended: Fri Feb 28 16:20:48 2025
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

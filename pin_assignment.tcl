@@ -13,11 +13,9 @@ set_location_assignment PIN_AC12 -to SPEED_FAC[1]
 
 # Assignments for input that modifies the time
 
-# SW[2], SW[3], KEY[1], KEY[3]
-set_location_assignment PIN_AF9  -to ADJUST
-set_location_assignment PIN_AF10 -to SEL 		 	 	
-set_location_assignment PIN_AA15 -to SEL_EVENT 	
-set_location_assignment PIN_W15  -to ENTER_VALUE	
+# SW[2], KEY[1]
+set_location_assignment PIN_AF9  -to ADJUST	 	
+set_location_assignment PIN_AA15 -to ENTER_VALUE
 
 # NEW_VALUE
 # SW[8] & SW[6..4]

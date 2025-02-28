@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for d_counter
-Wed Feb 26 23:02:42 2025
+Fri Feb 28 16:23:39 2025
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -125,13 +125,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
 
 
-+-------------------------------------------------+
-; Slow 1100mV 85C Model Fmax Summary              ;
-+-----------+-----------------+------------+------+
-; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
-+-----------+-----------------+------------+------+
-; 194.7 MHz ; 194.7 MHz       ; Clk        ;      ;
-+-----------+-----------------+------------+------+
++--------------------------------------------------+
+; Slow 1100mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 174.95 MHz ; 174.95 MHz      ; Clk        ;      ;
++------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -146,7 +146,7 @@ HTML report is unavailable in plain text report export.
 +-------+--------+--------------------+
 ; Clock ; Slack  ; End Point TNS      ;
 +-------+--------+--------------------+
-; Clk   ; -4.136 ; -265.500           ;
+; Clk   ; -4.716 ; -279.623           ;
 +-------+--------+--------------------+
 
 
@@ -155,7 +155,7 @@ HTML report is unavailable in plain text report export.
 +-------+-------+--------------------+
 ; Clock ; Slack ; End Point TNS      ;
 +-------+-------+--------------------+
-; Clk   ; 0.362 ; 0.000              ;
+; Clk   ; 0.351 ; 0.000              ;
 +-------+-------+--------------------+
 
 
@@ -176,7 +176,7 @@ No paths to report.
 +-------+--------+----------------------------------+
 ; Clock ; Slack  ; End Point TNS                    ;
 +-------+--------+----------------------------------+
-; Clk   ; -0.394 ; -41.349                          ;
+; Clk   ; -0.394 ; -39.370                          ;
 +-------+--------+----------------------------------+
 
 
@@ -185,16 +185,16 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; ADJUST        ; Clk        ; 3.090 ; 3.457 ; Rise       ; Clk             ;
-; NEW_VALUE[*]  ; Clk        ; 2.752 ; 3.138 ; Rise       ; Clk             ;
-;  NEW_VALUE[0] ; Clk        ; 2.502 ; 2.759 ; Rise       ; Clk             ;
-;  NEW_VALUE[1] ; Clk        ; 2.501 ; 2.873 ; Rise       ; Clk             ;
-;  NEW_VALUE[2] ; Clk        ; 2.752 ; 3.138 ; Rise       ; Clk             ;
-;  NEW_VALUE[3] ; Clk        ; 2.521 ; 2.671 ; Rise       ; Clk             ;
-; SEL_EVENT     ; Clk        ; 0.986 ; 1.301 ; Rise       ; Clk             ;
-; SPEED_FAC[*]  ; Clk        ; 4.697 ; 4.683 ; Rise       ; Clk             ;
-;  SPEED_FAC[0] ; Clk        ; 4.697 ; 4.683 ; Rise       ; Clk             ;
-;  SPEED_FAC[1] ; Clk        ; 4.445 ; 4.492 ; Rise       ; Clk             ;
+; ADJUST        ; Clk        ; 2.672 ; 3.215 ; Rise       ; Clk             ;
+; ENTER_VALUE   ; Clk        ; 1.604 ; 2.092 ; Rise       ; Clk             ;
+; NEW_VALUE[*]  ; Clk        ; 3.345 ; 4.463 ; Rise       ; Clk             ;
+;  NEW_VALUE[0] ; Clk        ; 2.538 ; 3.034 ; Rise       ; Clk             ;
+;  NEW_VALUE[1] ; Clk        ; 2.492 ; 3.464 ; Rise       ; Clk             ;
+;  NEW_VALUE[2] ; Clk        ; 3.345 ; 4.463 ; Rise       ; Clk             ;
+;  NEW_VALUE[3] ; Clk        ; 2.726 ; 3.876 ; Rise       ; Clk             ;
+; SPEED_FAC[*]  ; Clk        ; 4.731 ; 5.031 ; Rise       ; Clk             ;
+;  SPEED_FAC[0] ; Clk        ; 4.255 ; 4.511 ; Rise       ; Clk             ;
+;  SPEED_FAC[1] ; Clk        ; 4.731 ; 5.031 ; Rise       ; Clk             ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -203,16 +203,16 @@ No paths to report.
 +---------------+------------+--------+--------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +---------------+------------+--------+--------+------------+-----------------+
-; ADJUST        ; Clk        ; -0.360 ; -0.670 ; Rise       ; Clk             ;
-; NEW_VALUE[*]  ; Clk        ; -0.061 ; -0.237 ; Rise       ; Clk             ;
-;  NEW_VALUE[0] ; Clk        ; -0.943 ; -1.129 ; Rise       ; Clk             ;
-;  NEW_VALUE[1] ; Clk        ; -0.160 ; -0.446 ; Rise       ; Clk             ;
-;  NEW_VALUE[2] ; Clk        ; -0.386 ; -0.647 ; Rise       ; Clk             ;
-;  NEW_VALUE[3] ; Clk        ; -0.061 ; -0.237 ; Rise       ; Clk             ;
-; SEL_EVENT     ; Clk        ; 0.762  ; 0.440  ; Rise       ; Clk             ;
-; SPEED_FAC[*]  ; Clk        ; -1.132 ; -1.369 ; Rise       ; Clk             ;
-;  SPEED_FAC[0] ; Clk        ; -1.132 ; -1.369 ; Rise       ; Clk             ;
-;  SPEED_FAC[1] ; Clk        ; -1.288 ; -1.543 ; Rise       ; Clk             ;
+; ADJUST        ; Clk        ; 0.071  ; -0.161 ; Rise       ; Clk             ;
+; ENTER_VALUE   ; Clk        ; 0.282  ; -0.152 ; Rise       ; Clk             ;
+; NEW_VALUE[*]  ; Clk        ; -0.155 ; -0.622 ; Rise       ; Clk             ;
+;  NEW_VALUE[0] ; Clk        ; -0.691 ; -0.993 ; Rise       ; Clk             ;
+;  NEW_VALUE[1] ; Clk        ; -0.155 ; -0.622 ; Rise       ; Clk             ;
+;  NEW_VALUE[2] ; Clk        ; -0.952 ; -1.485 ; Rise       ; Clk             ;
+;  NEW_VALUE[3] ; Clk        ; -0.415 ; -0.889 ; Rise       ; Clk             ;
+; SPEED_FAC[*]  ; Clk        ; -0.264 ; -0.540 ; Rise       ; Clk             ;
+;  SPEED_FAC[0] ; Clk        ; -0.264 ; -0.540 ; Rise       ; Clk             ;
+;  SPEED_FAC[1] ; Clk        ; -0.633 ; -1.070 ; Rise       ; Clk             ;
 +---------------+------------+--------+--------+------------+-----------------+
 
 
@@ -221,109 +221,109 @@ No paths to report.
 +---------------+------------+--------+--------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +---------------+------------+--------+--------+------------+-----------------+
-; ssd_HourT[*]  ; Clk        ; 10.372 ; 11.207 ; Rise       ; Clk             ;
-;  ssd_HourT[0] ; Clk        ; 10.372 ; 11.207 ; Rise       ; Clk             ;
-;  ssd_HourT[2] ; Clk        ; 9.212  ; 9.591  ; Rise       ; Clk             ;
-;  ssd_HourT[3] ; Clk        ; 10.035 ; 10.768 ; Rise       ; Clk             ;
-;  ssd_HourT[4] ; Clk        ; 8.475  ; 8.944  ; Rise       ; Clk             ;
-;  ssd_HourT[5] ; Clk        ; 9.755  ; 9.359  ; Rise       ; Clk             ;
-;  ssd_HourT[6] ; Clk        ; 9.019  ; 8.535  ; Rise       ; Clk             ;
-; ssd_HourU[*]  ; Clk        ; 9.668  ; 10.136 ; Rise       ; Clk             ;
-;  ssd_HourU[0] ; Clk        ; 9.172  ; 9.675  ; Rise       ; Clk             ;
-;  ssd_HourU[1] ; Clk        ; 9.526  ; 10.136 ; Rise       ; Clk             ;
-;  ssd_HourU[2] ; Clk        ; 9.544  ; 10.107 ; Rise       ; Clk             ;
-;  ssd_HourU[3] ; Clk        ; 9.155  ; 9.627  ; Rise       ; Clk             ;
-;  ssd_HourU[4] ; Clk        ; 9.549  ; 10.124 ; Rise       ; Clk             ;
-;  ssd_HourU[5] ; Clk        ; 9.316  ; 9.602  ; Rise       ; Clk             ;
-;  ssd_HourU[6] ; Clk        ; 9.668  ; 9.297  ; Rise       ; Clk             ;
-; ssd_MinT[*]   ; Clk        ; 10.487 ; 11.457 ; Rise       ; Clk             ;
-;  ssd_MinT[0]  ; Clk        ; 10.327 ; 11.004 ; Rise       ; Clk             ;
-;  ssd_MinT[1]  ; Clk        ; 10.265 ; 10.781 ; Rise       ; Clk             ;
-;  ssd_MinT[2]  ; Clk        ; 9.770  ; 9.866  ; Rise       ; Clk             ;
-;  ssd_MinT[3]  ; Clk        ; 9.870  ; 10.328 ; Rise       ; Clk             ;
-;  ssd_MinT[4]  ; Clk        ; 10.487 ; 11.457 ; Rise       ; Clk             ;
-;  ssd_MinT[5]  ; Clk        ; 9.714  ; 10.202 ; Rise       ; Clk             ;
-;  ssd_MinT[6]  ; Clk        ; 9.485  ; 9.902  ; Rise       ; Clk             ;
-; ssd_MinU[*]   ; Clk        ; 10.353 ; 11.131 ; Rise       ; Clk             ;
-;  ssd_MinU[0]  ; Clk        ; 9.199  ; 9.369  ; Rise       ; Clk             ;
-;  ssd_MinU[1]  ; Clk        ; 10.176 ; 10.670 ; Rise       ; Clk             ;
-;  ssd_MinU[2]  ; Clk        ; 10.353 ; 11.131 ; Rise       ; Clk             ;
-;  ssd_MinU[3]  ; Clk        ; 10.224 ; 10.914 ; Rise       ; Clk             ;
-;  ssd_MinU[4]  ; Clk        ; 9.977  ; 10.397 ; Rise       ; Clk             ;
-;  ssd_MinU[5]  ; Clk        ; 9.921  ; 10.492 ; Rise       ; Clk             ;
-;  ssd_MinU[6]  ; Clk        ; 10.194 ; 9.846  ; Rise       ; Clk             ;
-; ssd_SecT[*]   ; Clk        ; 10.074 ; 10.853 ; Rise       ; Clk             ;
-;  ssd_SecT[0]  ; Clk        ; 9.598  ; 10.058 ; Rise       ; Clk             ;
-;  ssd_SecT[1]  ; Clk        ; 9.354  ; 9.799  ; Rise       ; Clk             ;
-;  ssd_SecT[2]  ; Clk        ; 10.074 ; 10.853 ; Rise       ; Clk             ;
-;  ssd_SecT[3]  ; Clk        ; 9.563  ; 10.270 ; Rise       ; Clk             ;
-;  ssd_SecT[4]  ; Clk        ; 9.843  ; 10.384 ; Rise       ; Clk             ;
-;  ssd_SecT[5]  ; Clk        ; 10.010 ; 10.600 ; Rise       ; Clk             ;
-;  ssd_SecT[6]  ; Clk        ; 9.198  ; 9.693  ; Rise       ; Clk             ;
-; ssd_SecU[*]   ; Clk        ; 9.831  ; 10.099 ; Rise       ; Clk             ;
-;  ssd_SecU[0]  ; Clk        ; 9.273  ; 9.700  ; Rise       ; Clk             ;
-;  ssd_SecU[1]  ; Clk        ; 9.151  ; 9.409  ; Rise       ; Clk             ;
-;  ssd_SecU[2]  ; Clk        ; 9.361  ; 9.968  ; Rise       ; Clk             ;
-;  ssd_SecU[3]  ; Clk        ; 9.171  ; 9.619  ; Rise       ; Clk             ;
-;  ssd_SecU[4]  ; Clk        ; 9.531  ; 10.099 ; Rise       ; Clk             ;
-;  ssd_SecU[5]  ; Clk        ; 9.602  ; 10.066 ; Rise       ; Clk             ;
-;  ssd_SecU[6]  ; Clk        ; 9.831  ; 9.208  ; Rise       ; Clk             ;
+; ssd_HourT[*]  ; Clk        ; 11.268 ; 12.261 ; Rise       ; Clk             ;
+;  ssd_HourT[0] ; Clk        ; 11.268 ; 12.261 ; Rise       ; Clk             ;
+;  ssd_HourT[2] ; Clk        ; 10.235 ; 11.092 ; Rise       ; Clk             ;
+;  ssd_HourT[3] ; Clk        ; 10.930 ; 11.800 ; Rise       ; Clk             ;
+;  ssd_HourT[4] ; Clk        ; 9.490  ; 10.340 ; Rise       ; Clk             ;
+;  ssd_HourT[5] ; Clk        ; 10.370 ; 10.107 ; Rise       ; Clk             ;
+;  ssd_HourT[6] ; Clk        ; 10.007 ; 9.291  ; Rise       ; Clk             ;
+; ssd_HourU[*]  ; Clk        ; 11.745 ; 11.332 ; Rise       ; Clk             ;
+;  ssd_HourU[0] ; Clk        ; 9.963  ; 10.723 ; Rise       ; Clk             ;
+;  ssd_HourU[1] ; Clk        ; 9.978  ; 10.663 ; Rise       ; Clk             ;
+;  ssd_HourU[2] ; Clk        ; 10.391 ; 11.332 ; Rise       ; Clk             ;
+;  ssd_HourU[3] ; Clk        ; 10.096 ; 10.914 ; Rise       ; Clk             ;
+;  ssd_HourU[4] ; Clk        ; 10.050 ; 10.593 ; Rise       ; Clk             ;
+;  ssd_HourU[5] ; Clk        ; 10.171 ; 10.941 ; Rise       ; Clk             ;
+;  ssd_HourU[6] ; Clk        ; 11.745 ; 10.750 ; Rise       ; Clk             ;
+; ssd_MinT[*]   ; Clk        ; 11.199 ; 12.323 ; Rise       ; Clk             ;
+;  ssd_MinT[0]  ; Clk        ; 10.122 ; 10.511 ; Rise       ; Clk             ;
+;  ssd_MinT[1]  ; Clk        ; 11.077 ; 12.214 ; Rise       ; Clk             ;
+;  ssd_MinT[2]  ; Clk        ; 10.088 ; 10.428 ; Rise       ; Clk             ;
+;  ssd_MinT[3]  ; Clk        ; 9.949  ; 10.510 ; Rise       ; Clk             ;
+;  ssd_MinT[4]  ; Clk        ; 11.199 ; 12.323 ; Rise       ; Clk             ;
+;  ssd_MinT[5]  ; Clk        ; 10.193 ; 10.512 ; Rise       ; Clk             ;
+;  ssd_MinT[6]  ; Clk        ; 9.880  ; 10.349 ; Rise       ; Clk             ;
+; ssd_MinU[*]   ; Clk        ; 12.126 ; 12.757 ; Rise       ; Clk             ;
+;  ssd_MinU[0]  ; Clk        ; 10.841 ; 10.920 ; Rise       ; Clk             ;
+;  ssd_MinU[1]  ; Clk        ; 11.311 ; 11.704 ; Rise       ; Clk             ;
+;  ssd_MinU[2]  ; Clk        ; 12.126 ; 12.757 ; Rise       ; Clk             ;
+;  ssd_MinU[3]  ; Clk        ; 11.635 ; 12.015 ; Rise       ; Clk             ;
+;  ssd_MinU[4]  ; Clk        ; 11.611 ; 11.911 ; Rise       ; Clk             ;
+;  ssd_MinU[5]  ; Clk        ; 11.536 ; 11.767 ; Rise       ; Clk             ;
+;  ssd_MinU[6]  ; Clk        ; 11.553 ; 11.487 ; Rise       ; Clk             ;
+; ssd_SecT[*]   ; Clk        ; 11.301 ; 11.635 ; Rise       ; Clk             ;
+;  ssd_SecT[0]  ; Clk        ; 11.037 ; 11.269 ; Rise       ; Clk             ;
+;  ssd_SecT[1]  ; Clk        ; 11.021 ; 11.466 ; Rise       ; Clk             ;
+;  ssd_SecT[2]  ; Clk        ; 11.301 ; 11.346 ; Rise       ; Clk             ;
+;  ssd_SecT[3]  ; Clk        ; 11.161 ; 11.576 ; Rise       ; Clk             ;
+;  ssd_SecT[4]  ; Clk        ; 10.923 ; 11.635 ; Rise       ; Clk             ;
+;  ssd_SecT[5]  ; Clk        ; 11.148 ; 11.433 ; Rise       ; Clk             ;
+;  ssd_SecT[6]  ; Clk        ; 10.752 ; 11.032 ; Rise       ; Clk             ;
+; ssd_SecU[*]   ; Clk        ; 11.037 ; 11.628 ; Rise       ; Clk             ;
+;  ssd_SecU[0]  ; Clk        ; 10.587 ; 11.243 ; Rise       ; Clk             ;
+;  ssd_SecU[1]  ; Clk        ; 10.596 ; 11.510 ; Rise       ; Clk             ;
+;  ssd_SecU[2]  ; Clk        ; 10.657 ; 11.560 ; Rise       ; Clk             ;
+;  ssd_SecU[3]  ; Clk        ; 10.345 ; 10.687 ; Rise       ; Clk             ;
+;  ssd_SecU[4]  ; Clk        ; 11.037 ; 11.628 ; Rise       ; Clk             ;
+;  ssd_SecU[5]  ; Clk        ; 10.175 ; 10.953 ; Rise       ; Clk             ;
+;  ssd_SecU[6]  ; Clk        ; 9.921  ; 9.671  ; Rise       ; Clk             ;
 +---------------+------------+--------+--------+------------+-----------------+
 
 
-+---------------------------------------------------------------------------+
-; Minimum Clock to Output Times                                             ;
-+---------------+------------+-------+-------+------------+-----------------+
-; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+---------------+------------+-------+-------+------------+-----------------+
-; ssd_HourT[*]  ; Clk        ; 7.954 ; 8.007 ; Rise       ; Clk             ;
-;  ssd_HourT[0] ; Clk        ; 9.301 ; 9.930 ; Rise       ; Clk             ;
-;  ssd_HourT[2] ; Clk        ; 8.400 ; 8.648 ; Rise       ; Clk             ;
-;  ssd_HourT[3] ; Clk        ; 9.004 ; 9.563 ; Rise       ; Clk             ;
-;  ssd_HourT[4] ; Clk        ; 7.954 ; 8.258 ; Rise       ; Clk             ;
-;  ssd_HourT[5] ; Clk        ; 8.738 ; 8.455 ; Rise       ; Clk             ;
-;  ssd_HourT[6] ; Clk        ; 8.313 ; 8.007 ; Rise       ; Clk             ;
-; ssd_HourU[*]  ; Clk        ; 8.176 ; 8.331 ; Rise       ; Clk             ;
-;  ssd_HourU[0] ; Clk        ; 8.176 ; 8.543 ; Rise       ; Clk             ;
-;  ssd_HourU[1] ; Clk        ; 8.494 ; 8.908 ; Rise       ; Clk             ;
-;  ssd_HourU[2] ; Clk        ; 8.457 ; 8.883 ; Rise       ; Clk             ;
-;  ssd_HourU[3] ; Clk        ; 8.179 ; 8.454 ; Rise       ; Clk             ;
-;  ssd_HourU[4] ; Clk        ; 8.519 ; 8.906 ; Rise       ; Clk             ;
-;  ssd_HourU[5] ; Clk        ; 8.300 ; 8.527 ; Rise       ; Clk             ;
-;  ssd_HourU[6] ; Clk        ; 8.601 ; 8.331 ; Rise       ; Clk             ;
-; ssd_MinT[*]   ; Clk        ; 8.318 ; 8.475 ; Rise       ; Clk             ;
-;  ssd_MinT[0]  ; Clk        ; 8.876 ; 9.314 ; Rise       ; Clk             ;
-;  ssd_MinT[1]  ; Clk        ; 8.789 ; 9.154 ; Rise       ; Clk             ;
-;  ssd_MinT[2]  ; Clk        ; 8.655 ; 8.895 ; Rise       ; Clk             ;
-;  ssd_MinT[3]  ; Clk        ; 8.492 ; 8.789 ; Rise       ; Clk             ;
-;  ssd_MinT[4]  ; Clk        ; 9.309 ; 9.780 ; Rise       ; Clk             ;
-;  ssd_MinT[5]  ; Clk        ; 8.747 ; 8.970 ; Rise       ; Clk             ;
-;  ssd_MinT[6]  ; Clk        ; 8.318 ; 8.475 ; Rise       ; Clk             ;
-; ssd_MinU[*]   ; Clk        ; 7.972 ; 8.077 ; Rise       ; Clk             ;
-;  ssd_MinU[0]  ; Clk        ; 7.972 ; 8.077 ; Rise       ; Clk             ;
-;  ssd_MinU[1]  ; Clk        ; 9.016 ; 9.492 ; Rise       ; Clk             ;
-;  ssd_MinU[2]  ; Clk        ; 9.183 ; 9.734 ; Rise       ; Clk             ;
-;  ssd_MinU[3]  ; Clk        ; 8.858 ; 9.326 ; Rise       ; Clk             ;
-;  ssd_MinU[4]  ; Clk        ; 8.692 ; 9.015 ; Rise       ; Clk             ;
-;  ssd_MinU[5]  ; Clk        ; 8.627 ; 9.094 ; Rise       ; Clk             ;
-;  ssd_MinU[6]  ; Clk        ; 8.839 ; 8.505 ; Rise       ; Clk             ;
-; ssd_SecT[*]   ; Clk        ; 8.150 ; 8.394 ; Rise       ; Clk             ;
-;  ssd_SecT[0]  ; Clk        ; 8.618 ; 8.982 ; Rise       ; Clk             ;
-;  ssd_SecT[1]  ; Clk        ; 8.150 ; 8.394 ; Rise       ; Clk             ;
-;  ssd_SecT[2]  ; Clk        ; 9.030 ; 9.571 ; Rise       ; Clk             ;
-;  ssd_SecT[3]  ; Clk        ; 8.770 ; 9.317 ; Rise       ; Clk             ;
-;  ssd_SecT[4]  ; Clk        ; 8.806 ; 9.184 ; Rise       ; Clk             ;
-;  ssd_SecT[5]  ; Clk        ; 8.935 ; 9.380 ; Rise       ; Clk             ;
-;  ssd_SecT[6]  ; Clk        ; 8.351 ; 8.754 ; Rise       ; Clk             ;
-; ssd_SecU[*]   ; Clk        ; 8.135 ; 8.242 ; Rise       ; Clk             ;
-;  ssd_SecU[0]  ; Clk        ; 8.190 ; 8.476 ; Rise       ; Clk             ;
-;  ssd_SecU[1]  ; Clk        ; 8.177 ; 8.355 ; Rise       ; Clk             ;
-;  ssd_SecU[2]  ; Clk        ; 8.385 ; 8.750 ; Rise       ; Clk             ;
-;  ssd_SecU[3]  ; Clk        ; 8.135 ; 8.428 ; Rise       ; Clk             ;
-;  ssd_SecU[4]  ; Clk        ; 8.409 ; 8.816 ; Rise       ; Clk             ;
-;  ssd_SecU[5]  ; Clk        ; 8.573 ; 8.912 ; Rise       ; Clk             ;
-;  ssd_SecU[6]  ; Clk        ; 8.551 ; 8.242 ; Rise       ; Clk             ;
-+---------------+------------+-------+-------+------------+-----------------+
++-----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                               ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; ssd_HourT[*]  ; Clk        ; 8.843  ; 8.676  ; Rise       ; Clk             ;
+;  ssd_HourT[0] ; Clk        ; 10.099 ; 10.974 ; Rise       ; Clk             ;
+;  ssd_HourT[2] ; Clk        ; 9.501  ; 9.875  ; Rise       ; Clk             ;
+;  ssd_HourT[3] ; Clk        ; 9.809  ; 10.577 ; Rise       ; Clk             ;
+;  ssd_HourT[4] ; Clk        ; 8.843  ; 9.419  ; Rise       ; Clk             ;
+;  ssd_HourT[5] ; Clk        ; 9.350  ; 9.188  ; Rise       ; Clk             ;
+;  ssd_HourT[6] ; Clk        ; 9.147  ; 8.676  ; Rise       ; Clk             ;
+; ssd_HourU[*]  ; Clk        ; 9.040  ; 9.381  ; Rise       ; Clk             ;
+;  ssd_HourU[0] ; Clk        ; 9.098  ; 9.622  ; Rise       ; Clk             ;
+;  ssd_HourU[1] ; Clk        ; 9.040  ; 9.586  ; Rise       ; Clk             ;
+;  ssd_HourU[2] ; Clk        ; 9.456  ; 10.178 ; Rise       ; Clk             ;
+;  ssd_HourU[3] ; Clk        ; 9.068  ; 9.692  ; Rise       ; Clk             ;
+;  ssd_HourU[4] ; Clk        ; 9.234  ; 9.721  ; Rise       ; Clk             ;
+;  ssd_HourU[5] ; Clk        ; 9.221  ; 9.837  ; Rise       ; Clk             ;
+;  ssd_HourU[6] ; Clk        ; 10.074 ; 9.381  ; Rise       ; Clk             ;
+; ssd_MinT[*]   ; Clk        ; 8.858  ; 9.140  ; Rise       ; Clk             ;
+;  ssd_MinT[0]  ; Clk        ; 9.122  ; 9.410  ; Rise       ; Clk             ;
+;  ssd_MinT[1]  ; Clk        ; 9.745  ; 10.431 ; Rise       ; Clk             ;
+;  ssd_MinT[2]  ; Clk        ; 8.858  ; 9.322  ; Rise       ; Clk             ;
+;  ssd_MinT[3]  ; Clk        ; 8.876  ; 9.276  ; Rise       ; Clk             ;
+;  ssd_MinT[4]  ; Clk        ; 9.918  ; 10.534 ; Rise       ; Clk             ;
+;  ssd_MinT[5]  ; Clk        ; 8.959  ; 9.383  ; Rise       ; Clk             ;
+;  ssd_MinT[6]  ; Clk        ; 8.866  ; 9.140  ; Rise       ; Clk             ;
+; ssd_MinU[*]   ; Clk        ; 9.056  ; 8.846  ; Rise       ; Clk             ;
+;  ssd_MinU[0]  ; Clk        ; 9.056  ; 8.846  ; Rise       ; Clk             ;
+;  ssd_MinU[1]  ; Clk        ; 9.426  ; 9.930  ; Rise       ; Clk             ;
+;  ssd_MinU[2]  ; Clk        ; 9.995  ; 10.831 ; Rise       ; Clk             ;
+;  ssd_MinU[3]  ; Clk        ; 9.872  ; 9.871  ; Rise       ; Clk             ;
+;  ssd_MinU[4]  ; Clk        ; 9.794  ; 9.747  ; Rise       ; Clk             ;
+;  ssd_MinU[5]  ; Clk        ; 9.765  ; 9.709  ; Rise       ; Clk             ;
+;  ssd_MinU[6]  ; Clk        ; 9.983  ; 9.707  ; Rise       ; Clk             ;
+; ssd_SecT[*]   ; Clk        ; 9.125  ; 9.252  ; Rise       ; Clk             ;
+;  ssd_SecT[0]  ; Clk        ; 9.358  ; 9.610  ; Rise       ; Clk             ;
+;  ssd_SecT[1]  ; Clk        ; 9.437  ; 9.725  ; Rise       ; Clk             ;
+;  ssd_SecT[2]  ; Clk        ; 9.666  ; 9.929  ; Rise       ; Clk             ;
+;  ssd_SecT[3]  ; Clk        ; 9.516  ; 9.830  ; Rise       ; Clk             ;
+;  ssd_SecT[4]  ; Clk        ; 9.598  ; 9.977  ; Rise       ; Clk             ;
+;  ssd_SecT[5]  ; Clk        ; 9.552  ; 9.985  ; Rise       ; Clk             ;
+;  ssd_SecT[6]  ; Clk        ; 9.125  ; 9.252  ; Rise       ; Clk             ;
+; ssd_SecU[*]   ; Clk        ; 8.642  ; 8.563  ; Rise       ; Clk             ;
+;  ssd_SecU[0]  ; Clk        ; 9.258  ; 9.712  ; Rise       ; Clk             ;
+;  ssd_SecU[1]  ; Clk        ; 9.312  ; 9.800  ; Rise       ; Clk             ;
+;  ssd_SecU[2]  ; Clk        ; 9.375  ; 9.872  ; Rise       ; Clk             ;
+;  ssd_SecU[3]  ; Clk        ; 8.907  ; 9.217  ; Rise       ; Clk             ;
+;  ssd_SecU[4]  ; Clk        ; 9.585  ; 10.255 ; Rise       ; Clk             ;
+;  ssd_SecU[5]  ; Clk        ; 9.100  ; 9.648  ; Rise       ; Clk             ;
+;  ssd_SecU[6]  ; Clk        ; 8.642  ; 8.563  ; Rise       ; Clk             ;
++---------------+------------+--------+--------+------------+-----------------+
 
 
 ----------------------------------------------
@@ -332,13 +332,13 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+-------------------------------------------------+
-; Slow 1100mV 0C Model Fmax Summary               ;
-+-----------+-----------------+------------+------+
-; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
-+-----------+-----------------+------------+------+
-; 194.4 MHz ; 194.4 MHz       ; Clk        ;      ;
-+-----------+-----------------+------------+------+
++--------------------------------------------------+
+; Slow 1100mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 174.55 MHz ; 174.55 MHz      ; Clk        ;      ;
++------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -347,7 +347,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+-------------------+
 ; Clock ; Slack  ; End Point TNS     ;
 +-------+--------+-------------------+
-; Clk   ; -4.144 ; -264.083          ;
+; Clk   ; -4.729 ; -279.019          ;
 +-------+--------+-------------------+
 
 
@@ -356,7 +356,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+-------------------+
 ; Clock ; Slack ; End Point TNS     ;
 +-------+-------+-------------------+
-; Clk   ; 0.383 ; 0.000             ;
+; Clk   ; 0.336 ; 0.000             ;
 +-------+-------+-------------------+
 
 
@@ -377,7 +377,7 @@ No paths to report.
 +-------+--------+---------------------------------+
 ; Clock ; Slack  ; End Point TNS                   ;
 +-------+--------+---------------------------------+
-; Clk   ; -0.394 ; -43.943                         ;
+; Clk   ; -0.394 ; -42.440                         ;
 +-------+--------+---------------------------------+
 
 
@@ -386,16 +386,16 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; ADJUST        ; Clk        ; 2.873 ; 3.329 ; Rise       ; Clk             ;
-; NEW_VALUE[*]  ; Clk        ; 2.573 ; 3.053 ; Rise       ; Clk             ;
-;  NEW_VALUE[0] ; Clk        ; 2.268 ; 2.629 ; Rise       ; Clk             ;
-;  NEW_VALUE[1] ; Clk        ; 2.294 ; 2.729 ; Rise       ; Clk             ;
-;  NEW_VALUE[2] ; Clk        ; 2.573 ; 3.053 ; Rise       ; Clk             ;
-;  NEW_VALUE[3] ; Clk        ; 2.331 ; 2.509 ; Rise       ; Clk             ;
-; SEL_EVENT     ; Clk        ; 0.845 ; 1.208 ; Rise       ; Clk             ;
-; SPEED_FAC[*]  ; Clk        ; 4.326 ; 4.373 ; Rise       ; Clk             ;
-;  SPEED_FAC[0] ; Clk        ; 4.326 ; 4.373 ; Rise       ; Clk             ;
-;  SPEED_FAC[1] ; Clk        ; 4.076 ; 4.169 ; Rise       ; Clk             ;
+; ADJUST        ; Clk        ; 2.428 ; 2.992 ; Rise       ; Clk             ;
+; ENTER_VALUE   ; Clk        ; 1.548 ; 2.036 ; Rise       ; Clk             ;
+; NEW_VALUE[*]  ; Clk        ; 3.287 ; 4.436 ; Rise       ; Clk             ;
+;  NEW_VALUE[0] ; Clk        ; 2.450 ; 2.935 ; Rise       ; Clk             ;
+;  NEW_VALUE[1] ; Clk        ; 2.442 ; 3.425 ; Rise       ; Clk             ;
+;  NEW_VALUE[2] ; Clk        ; 3.287 ; 4.436 ; Rise       ; Clk             ;
+;  NEW_VALUE[3] ; Clk        ; 2.627 ; 3.780 ; Rise       ; Clk             ;
+; SPEED_FAC[*]  ; Clk        ; 4.576 ; 4.909 ; Rise       ; Clk             ;
+;  SPEED_FAC[0] ; Clk        ; 4.026 ; 4.351 ; Rise       ; Clk             ;
+;  SPEED_FAC[1] ; Clk        ; 4.576 ; 4.909 ; Rise       ; Clk             ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -404,16 +404,16 @@ No paths to report.
 +---------------+------------+--------+--------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +---------------+------------+--------+--------+------------+-----------------+
-; ADJUST        ; Clk        ; -0.135 ; -0.481 ; Rise       ; Clk             ;
-; NEW_VALUE[*]  ; Clk        ; 0.131  ; -0.115 ; Rise       ; Clk             ;
-;  NEW_VALUE[0] ; Clk        ; -0.735 ; -0.969 ; Rise       ; Clk             ;
-;  NEW_VALUE[1] ; Clk        ; 0.028  ; -0.302 ; Rise       ; Clk             ;
-;  NEW_VALUE[2] ; Clk        ; -0.213 ; -0.539 ; Rise       ; Clk             ;
-;  NEW_VALUE[3] ; Clk        ; 0.131  ; -0.115 ; Rise       ; Clk             ;
-; SEL_EVENT     ; Clk        ; 0.931  ; 0.575  ; Rise       ; Clk             ;
-; SPEED_FAC[*]  ; Clk        ; -0.926 ; -1.244 ; Rise       ; Clk             ;
-;  SPEED_FAC[0] ; Clk        ; -0.926 ; -1.244 ; Rise       ; Clk             ;
-;  SPEED_FAC[1] ; Clk        ; -1.132 ; -1.433 ; Rise       ; Clk             ;
+; ADJUST        ; Clk        ; 0.252  ; -0.035 ; Rise       ; Clk             ;
+; ENTER_VALUE   ; Clk        ; 0.357  ; -0.103 ; Rise       ; Clk             ;
+; NEW_VALUE[*]  ; Clk        ; -0.046 ; -0.554 ; Rise       ; Clk             ;
+;  NEW_VALUE[0] ; Clk        ; -0.567 ; -0.908 ; Rise       ; Clk             ;
+;  NEW_VALUE[1] ; Clk        ; -0.046 ; -0.554 ; Rise       ; Clk             ;
+;  NEW_VALUE[2] ; Clk        ; -0.844 ; -1.477 ; Rise       ; Clk             ;
+;  NEW_VALUE[3] ; Clk        ; -0.294 ; -0.840 ; Rise       ; Clk             ;
+; SPEED_FAC[*]  ; Clk        ; -0.049 ; -0.391 ; Rise       ; Clk             ;
+;  SPEED_FAC[0] ; Clk        ; -0.049 ; -0.391 ; Rise       ; Clk             ;
+;  SPEED_FAC[1] ; Clk        ; -0.468 ; -0.924 ; Rise       ; Clk             ;
 +---------------+------------+--------+--------+------------+-----------------+
 
 
@@ -422,109 +422,109 @@ No paths to report.
 +---------------+------------+--------+--------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +---------------+------------+--------+--------+------------+-----------------+
-; ssd_HourT[*]  ; Clk        ; 10.291 ; 11.175 ; Rise       ; Clk             ;
-;  ssd_HourT[0] ; Clk        ; 10.291 ; 11.175 ; Rise       ; Clk             ;
-;  ssd_HourT[2] ; Clk        ; 9.005  ; 9.427  ; Rise       ; Clk             ;
-;  ssd_HourT[3] ; Clk        ; 9.970  ; 10.734 ; Rise       ; Clk             ;
-;  ssd_HourT[4] ; Clk        ; 8.337  ; 8.863  ; Rise       ; Clk             ;
-;  ssd_HourT[5] ; Clk        ; 9.640  ; 9.197  ; Rise       ; Clk             ;
-;  ssd_HourT[6] ; Clk        ; 8.949  ; 8.406  ; Rise       ; Clk             ;
-; ssd_HourU[*]  ; Clk        ; 9.542  ; 10.096 ; Rise       ; Clk             ;
-;  ssd_HourU[0] ; Clk        ; 9.117  ; 9.639  ; Rise       ; Clk             ;
-;  ssd_HourU[1] ; Clk        ; 9.475  ; 10.096 ; Rise       ; Clk             ;
-;  ssd_HourU[2] ; Clk        ; 9.386  ; 9.995  ; Rise       ; Clk             ;
-;  ssd_HourU[3] ; Clk        ; 9.059  ; 9.570  ; Rise       ; Clk             ;
-;  ssd_HourU[4] ; Clk        ; 9.477  ; 10.094 ; Rise       ; Clk             ;
-;  ssd_HourU[5] ; Clk        ; 9.137  ; 9.500  ; Rise       ; Clk             ;
-;  ssd_HourU[6] ; Clk        ; 9.542  ; 9.144  ; Rise       ; Clk             ;
-; ssd_MinT[*]   ; Clk        ; 10.322 ; 11.392 ; Rise       ; Clk             ;
-;  ssd_MinT[0]  ; Clk        ; 10.230 ; 10.957 ; Rise       ; Clk             ;
-;  ssd_MinT[1]  ; Clk        ; 10.168 ; 10.719 ; Rise       ; Clk             ;
-;  ssd_MinT[2]  ; Clk        ; 9.632  ; 9.780  ; Rise       ; Clk             ;
-;  ssd_MinT[3]  ; Clk        ; 9.739  ; 10.242 ; Rise       ; Clk             ;
-;  ssd_MinT[4]  ; Clk        ; 10.322 ; 11.392 ; Rise       ; Clk             ;
-;  ssd_MinT[5]  ; Clk        ; 9.570  ; 10.113 ; Rise       ; Clk             ;
-;  ssd_MinT[6]  ; Clk        ; 9.347  ; 9.806  ; Rise       ; Clk             ;
-; ssd_MinU[*]   ; Clk        ; 10.217 ; 11.079 ; Rise       ; Clk             ;
-;  ssd_MinU[0]  ; Clk        ; 9.061  ; 9.276  ; Rise       ; Clk             ;
-;  ssd_MinU[1]  ; Clk        ; 10.045 ; 10.605 ; Rise       ; Clk             ;
-;  ssd_MinU[2]  ; Clk        ; 10.217 ; 11.079 ; Rise       ; Clk             ;
-;  ssd_MinU[3]  ; Clk        ; 10.112 ; 10.883 ; Rise       ; Clk             ;
-;  ssd_MinU[4]  ; Clk        ; 9.780  ; 10.270 ; Rise       ; Clk             ;
-;  ssd_MinU[5]  ; Clk        ; 9.792  ; 10.437 ; Rise       ; Clk             ;
-;  ssd_MinU[6]  ; Clk        ; 10.083 ; 9.648  ; Rise       ; Clk             ;
-; ssd_SecT[*]   ; Clk        ; 9.970  ; 10.812 ; Rise       ; Clk             ;
-;  ssd_SecT[0]  ; Clk        ; 9.474  ; 10.000 ; Rise       ; Clk             ;
-;  ssd_SecT[1]  ; Clk        ; 9.221  ; 9.721  ; Rise       ; Clk             ;
-;  ssd_SecT[2]  ; Clk        ; 9.970  ; 10.812 ; Rise       ; Clk             ;
-;  ssd_SecT[3]  ; Clk        ; 9.462  ; 10.242 ; Rise       ; Clk             ;
-;  ssd_SecT[4]  ; Clk        ; 9.717  ; 10.324 ; Rise       ; Clk             ;
-;  ssd_SecT[5]  ; Clk        ; 9.904  ; 10.563 ; Rise       ; Clk             ;
-;  ssd_SecT[6]  ; Clk        ; 9.102  ; 9.651  ; Rise       ; Clk             ;
-; ssd_SecU[*]   ; Clk        ; 9.731  ; 10.027 ; Rise       ; Clk             ;
-;  ssd_SecU[0]  ; Clk        ; 9.154  ; 9.671  ; Rise       ; Clk             ;
-;  ssd_SecU[1]  ; Clk        ; 9.033  ; 9.353  ; Rise       ; Clk             ;
-;  ssd_SecU[2]  ; Clk        ; 9.234  ; 9.943  ; Rise       ; Clk             ;
-;  ssd_SecU[3]  ; Clk        ; 9.079  ; 9.580  ; Rise       ; Clk             ;
-;  ssd_SecU[4]  ; Clk        ; 9.399  ; 10.026 ; Rise       ; Clk             ;
-;  ssd_SecU[5]  ; Clk        ; 9.503  ; 10.027 ; Rise       ; Clk             ;
-;  ssd_SecU[6]  ; Clk        ; 9.731  ; 9.083  ; Rise       ; Clk             ;
+; ssd_HourT[*]  ; Clk        ; 11.149 ; 12.227 ; Rise       ; Clk             ;
+;  ssd_HourT[0] ; Clk        ; 11.149 ; 12.227 ; Rise       ; Clk             ;
+;  ssd_HourT[2] ; Clk        ; 10.086 ; 11.004 ; Rise       ; Clk             ;
+;  ssd_HourT[3] ; Clk        ; 10.823 ; 11.761 ; Rise       ; Clk             ;
+;  ssd_HourT[4] ; Clk        ; 9.406  ; 10.309 ; Rise       ; Clk             ;
+;  ssd_HourT[5] ; Clk        ; 10.192 ; 9.868  ; Rise       ; Clk             ;
+;  ssd_HourT[6] ; Clk        ; 9.933  ; 9.163  ; Rise       ; Clk             ;
+; ssd_HourU[*]  ; Clk        ; 11.721 ; 11.352 ; Rise       ; Clk             ;
+;  ssd_HourU[0] ; Clk        ; 9.925  ; 10.716 ; Rise       ; Clk             ;
+;  ssd_HourU[1] ; Clk        ; 9.913  ; 10.625 ; Rise       ; Clk             ;
+;  ssd_HourU[2] ; Clk        ; 10.378 ; 11.352 ; Rise       ; Clk             ;
+;  ssd_HourU[3] ; Clk        ; 10.054 ; 10.915 ; Rise       ; Clk             ;
+;  ssd_HourU[4] ; Clk        ; 9.997  ; 10.575 ; Rise       ; Clk             ;
+;  ssd_HourU[5] ; Clk        ; 10.140 ; 10.910 ; Rise       ; Clk             ;
+;  ssd_HourU[6] ; Clk        ; 11.721 ; 10.677 ; Rise       ; Clk             ;
+; ssd_MinT[*]   ; Clk        ; 11.125 ; 12.316 ; Rise       ; Clk             ;
+;  ssd_MinT[0]  ; Clk        ; 9.991  ; 10.444 ; Rise       ; Clk             ;
+;  ssd_MinT[1]  ; Clk        ; 11.069 ; 12.228 ; Rise       ; Clk             ;
+;  ssd_MinT[2]  ; Clk        ; 10.034 ; 10.396 ; Rise       ; Clk             ;
+;  ssd_MinT[3]  ; Clk        ; 9.868  ; 10.466 ; Rise       ; Clk             ;
+;  ssd_MinT[4]  ; Clk        ; 11.125 ; 12.316 ; Rise       ; Clk             ;
+;  ssd_MinT[5]  ; Clk        ; 10.080 ; 10.467 ; Rise       ; Clk             ;
+;  ssd_MinT[6]  ; Clk        ; 9.782  ; 10.293 ; Rise       ; Clk             ;
+; ssd_MinU[*]   ; Clk        ; 12.090 ; 12.764 ; Rise       ; Clk             ;
+;  ssd_MinU[0]  ; Clk        ; 10.779 ; 10.889 ; Rise       ; Clk             ;
+;  ssd_MinU[1]  ; Clk        ; 11.182 ; 11.632 ; Rise       ; Clk             ;
+;  ssd_MinU[2]  ; Clk        ; 12.090 ; 12.764 ; Rise       ; Clk             ;
+;  ssd_MinU[3]  ; Clk        ; 11.559 ; 11.997 ; Rise       ; Clk             ;
+;  ssd_MinU[4]  ; Clk        ; 11.482 ; 11.851 ; Rise       ; Clk             ;
+;  ssd_MinU[5]  ; Clk        ; 11.405 ; 11.687 ; Rise       ; Clk             ;
+;  ssd_MinU[6]  ; Clk        ; 11.397 ; 11.326 ; Rise       ; Clk             ;
+; ssd_SecT[*]   ; Clk        ; 11.206 ; 11.591 ; Rise       ; Clk             ;
+;  ssd_SecT[0]  ; Clk        ; 10.936 ; 11.216 ; Rise       ; Clk             ;
+;  ssd_SecT[1]  ; Clk        ; 10.926 ; 11.419 ; Rise       ; Clk             ;
+;  ssd_SecT[2]  ; Clk        ; 11.206 ; 11.334 ; Rise       ; Clk             ;
+;  ssd_SecT[3]  ; Clk        ; 11.032 ; 11.529 ; Rise       ; Clk             ;
+;  ssd_SecT[4]  ; Clk        ; 10.824 ; 11.591 ; Rise       ; Clk             ;
+;  ssd_SecT[5]  ; Clk        ; 11.013 ; 11.380 ; Rise       ; Clk             ;
+;  ssd_SecT[6]  ; Clk        ; 10.619 ; 10.966 ; Rise       ; Clk             ;
+; ssd_SecU[*]   ; Clk        ; 10.954 ; 11.606 ; Rise       ; Clk             ;
+;  ssd_SecU[0]  ; Clk        ; 10.453 ; 11.214 ; Rise       ; Clk             ;
+;  ssd_SecU[1]  ; Clk        ; 10.497 ; 11.479 ; Rise       ; Clk             ;
+;  ssd_SecU[2]  ; Clk        ; 10.564 ; 11.535 ; Rise       ; Clk             ;
+;  ssd_SecU[3]  ; Clk        ; 10.242 ; 10.648 ; Rise       ; Clk             ;
+;  ssd_SecU[4]  ; Clk        ; 10.954 ; 11.606 ; Rise       ; Clk             ;
+;  ssd_SecU[5]  ; Clk        ; 10.095 ; 10.942 ; Rise       ; Clk             ;
+;  ssd_SecU[6]  ; Clk        ; 9.824  ; 9.515  ; Rise       ; Clk             ;
 +---------------+------------+--------+--------+------------+-----------------+
 
 
-+---------------------------------------------------------------------------+
-; Minimum Clock to Output Times                                             ;
-+---------------+------------+-------+-------+------------+-----------------+
-; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+---------------+------------+-------+-------+------------+-----------------+
-; ssd_HourT[*]  ; Clk        ; 7.833 ; 7.895 ; Rise       ; Clk             ;
-;  ssd_HourT[0] ; Clk        ; 9.184 ; 9.875 ; Rise       ; Clk             ;
-;  ssd_HourT[2] ; Clk        ; 8.185 ; 8.472 ; Rise       ; Clk             ;
-;  ssd_HourT[3] ; Clk        ; 8.903 ; 9.509 ; Rise       ; Clk             ;
-;  ssd_HourT[4] ; Clk        ; 7.833 ; 8.203 ; Rise       ; Clk             ;
-;  ssd_HourT[5] ; Clk        ; 8.610 ; 8.282 ; Rise       ; Clk             ;
-;  ssd_HourT[6] ; Clk        ; 8.266 ; 7.895 ; Rise       ; Clk             ;
-; ssd_HourU[*]  ; Clk        ; 8.047 ; 8.158 ; Rise       ; Clk             ;
-;  ssd_HourU[0] ; Clk        ; 8.084 ; 8.498 ; Rise       ; Clk             ;
-;  ssd_HourU[1] ; Clk        ; 8.409 ; 8.848 ; Rise       ; Clk             ;
-;  ssd_HourU[2] ; Clk        ; 8.341 ; 8.830 ; Rise       ; Clk             ;
-;  ssd_HourU[3] ; Clk        ; 8.047 ; 8.375 ; Rise       ; Clk             ;
-;  ssd_HourU[4] ; Clk        ; 8.414 ; 8.842 ; Rise       ; Clk             ;
-;  ssd_HourU[5] ; Clk        ; 8.198 ; 8.436 ; Rise       ; Clk             ;
-;  ssd_HourU[6] ; Clk        ; 8.467 ; 8.158 ; Rise       ; Clk             ;
-; ssd_MinT[*]   ; Clk        ; 8.157 ; 8.359 ; Rise       ; Clk             ;
-;  ssd_MinT[0]  ; Clk        ; 8.778 ; 9.237 ; Rise       ; Clk             ;
-;  ssd_MinT[1]  ; Clk        ; 8.654 ; 9.071 ; Rise       ; Clk             ;
-;  ssd_MinT[2]  ; Clk        ; 8.533 ; 8.827 ; Rise       ; Clk             ;
-;  ssd_MinT[3]  ; Clk        ; 8.373 ; 8.713 ; Rise       ; Clk             ;
-;  ssd_MinT[4]  ; Clk        ; 9.153 ; 9.690 ; Rise       ; Clk             ;
-;  ssd_MinT[5]  ; Clk        ; 8.602 ; 8.905 ; Rise       ; Clk             ;
-;  ssd_MinT[6]  ; Clk        ; 8.157 ; 8.359 ; Rise       ; Clk             ;
-; ssd_MinU[*]   ; Clk        ; 7.823 ; 7.998 ; Rise       ; Clk             ;
-;  ssd_MinU[0]  ; Clk        ; 7.823 ; 7.998 ; Rise       ; Clk             ;
-;  ssd_MinU[1]  ; Clk        ; 8.852 ; 9.402 ; Rise       ; Clk             ;
-;  ssd_MinU[2]  ; Clk        ; 9.029 ; 9.653 ; Rise       ; Clk             ;
-;  ssd_MinU[3]  ; Clk        ; 8.722 ; 9.289 ; Rise       ; Clk             ;
-;  ssd_MinU[4]  ; Clk        ; 8.486 ; 8.900 ; Rise       ; Clk             ;
-;  ssd_MinU[5]  ; Clk        ; 8.470 ; 9.042 ; Rise       ; Clk             ;
-;  ssd_MinU[6]  ; Clk        ; 8.709 ; 8.323 ; Rise       ; Clk             ;
-; ssd_SecT[*]   ; Clk        ; 8.021 ; 8.321 ; Rise       ; Clk             ;
-;  ssd_SecT[0]  ; Clk        ; 8.466 ; 8.917 ; Rise       ; Clk             ;
-;  ssd_SecT[1]  ; Clk        ; 8.021 ; 8.321 ; Rise       ; Clk             ;
-;  ssd_SecT[2]  ; Clk        ; 8.899 ; 9.512 ; Rise       ; Clk             ;
-;  ssd_SecT[3]  ; Clk        ; 8.666 ; 9.247 ; Rise       ; Clk             ;
-;  ssd_SecT[4]  ; Clk        ; 8.660 ; 9.110 ; Rise       ; Clk             ;
-;  ssd_SecT[5]  ; Clk        ; 8.805 ; 9.336 ; Rise       ; Clk             ;
-;  ssd_SecT[6]  ; Clk        ; 8.244 ; 8.675 ; Rise       ; Clk             ;
-; ssd_SecU[*]   ; Clk        ; 7.992 ; 8.104 ; Rise       ; Clk             ;
-;  ssd_SecU[0]  ; Clk        ; 8.043 ; 8.399 ; Rise       ; Clk             ;
-;  ssd_SecU[1]  ; Clk        ; 8.026 ; 8.253 ; Rise       ; Clk             ;
-;  ssd_SecU[2]  ; Clk        ; 8.243 ; 8.672 ; Rise       ; Clk             ;
-;  ssd_SecU[3]  ; Clk        ; 7.992 ; 8.355 ; Rise       ; Clk             ;
-;  ssd_SecU[4]  ; Clk        ; 8.267 ; 8.755 ; Rise       ; Clk             ;
-;  ssd_SecU[5]  ; Clk        ; 8.446 ; 8.848 ; Rise       ; Clk             ;
-;  ssd_SecU[6]  ; Clk        ; 8.479 ; 8.104 ; Rise       ; Clk             ;
-+---------------+------------+-------+-------+------------+-----------------+
++-----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                               ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; ssd_HourT[*]  ; Clk        ; 8.768  ; 8.563  ; Rise       ; Clk             ;
+;  ssd_HourT[0] ; Clk        ; 9.990  ; 10.930 ; Rise       ; Clk             ;
+;  ssd_HourT[2] ; Clk        ; 9.361  ; 9.774  ; Rise       ; Clk             ;
+;  ssd_HourT[3] ; Clk        ; 9.707  ; 10.528 ; Rise       ; Clk             ;
+;  ssd_HourT[4] ; Clk        ; 8.768  ; 9.402  ; Rise       ; Clk             ;
+;  ssd_HourT[5] ; Clk        ; 9.163  ; 8.975  ; Rise       ; Clk             ;
+;  ssd_HourT[6] ; Clk        ; 9.111  ; 8.563  ; Rise       ; Clk             ;
+; ssd_HourU[*]  ; Clk        ; 8.954  ; 9.295  ; Rise       ; Clk             ;
+;  ssd_HourU[0] ; Clk        ; 9.026  ; 9.593  ; Rise       ; Clk             ;
+;  ssd_HourU[1] ; Clk        ; 8.954  ; 9.505  ; Rise       ; Clk             ;
+;  ssd_HourU[2] ; Clk        ; 9.374  ; 10.172 ; Rise       ; Clk             ;
+;  ssd_HourU[3] ; Clk        ; 9.006  ; 9.633  ; Rise       ; Clk             ;
+;  ssd_HourU[4] ; Clk        ; 9.147  ; 9.671  ; Rise       ; Clk             ;
+;  ssd_HourU[5] ; Clk        ; 9.115  ; 9.828  ; Rise       ; Clk             ;
+;  ssd_HourU[6] ; Clk        ; 10.034 ; 9.295  ; Rise       ; Clk             ;
+; ssd_MinT[*]   ; Clk        ; 8.767  ; 9.082  ; Rise       ; Clk             ;
+;  ssd_MinT[0]  ; Clk        ; 8.995  ; 9.334  ; Rise       ; Clk             ;
+;  ssd_MinT[1]  ; Clk        ; 9.683  ; 10.404 ; Rise       ; Clk             ;
+;  ssd_MinT[2]  ; Clk        ; 8.767  ; 9.261  ; Rise       ; Clk             ;
+;  ssd_MinT[3]  ; Clk        ; 8.793  ; 9.253  ; Rise       ; Clk             ;
+;  ssd_MinT[4]  ; Clk        ; 9.803  ; 10.497 ; Rise       ; Clk             ;
+;  ssd_MinT[5]  ; Clk        ; 8.845  ; 9.308  ; Rise       ; Clk             ;
+;  ssd_MinT[6]  ; Clk        ; 8.768  ; 9.082  ; Rise       ; Clk             ;
+; ssd_MinU[*]   ; Clk        ; 8.950  ; 8.741  ; Rise       ; Clk             ;
+;  ssd_MinU[0]  ; Clk        ; 8.950  ; 8.741  ; Rise       ; Clk             ;
+;  ssd_MinU[1]  ; Clk        ; 9.215  ; 9.812  ; Rise       ; Clk             ;
+;  ssd_MinU[2]  ; Clk        ; 9.869  ; 10.777 ; Rise       ; Clk             ;
+;  ssd_MinU[3]  ; Clk        ; 9.746  ; 9.763  ; Rise       ; Clk             ;
+;  ssd_MinU[4]  ; Clk        ; 9.629  ; 9.610  ; Rise       ; Clk             ;
+;  ssd_MinU[5]  ; Clk        ; 9.592  ; 9.556  ; Rise       ; Clk             ;
+;  ssd_MinU[6]  ; Clk        ; 9.843  ; 9.522  ; Rise       ; Clk             ;
+; ssd_SecT[*]   ; Clk        ; 9.004  ; 9.192  ; Rise       ; Clk             ;
+;  ssd_SecT[0]  ; Clk        ; 9.245  ; 9.563  ; Rise       ; Clk             ;
+;  ssd_SecT[1]  ; Clk        ; 9.344  ; 9.673  ; Rise       ; Clk             ;
+;  ssd_SecT[2]  ; Clk        ; 9.570  ; 9.895  ; Rise       ; Clk             ;
+;  ssd_SecT[3]  ; Clk        ; 9.405  ; 9.784  ; Rise       ; Clk             ;
+;  ssd_SecT[4]  ; Clk        ; 9.491  ; 9.957  ; Rise       ; Clk             ;
+;  ssd_SecT[5]  ; Clk        ; 9.438  ; 9.927  ; Rise       ; Clk             ;
+;  ssd_SecT[6]  ; Clk        ; 9.004  ; 9.192  ; Rise       ; Clk             ;
+; ssd_SecU[*]   ; Clk        ; 8.521  ; 8.366  ; Rise       ; Clk             ;
+;  ssd_SecU[0]  ; Clk        ; 9.108  ; 9.646  ; Rise       ; Clk             ;
+;  ssd_SecU[1]  ; Clk        ; 9.200  ; 9.767  ; Rise       ; Clk             ;
+;  ssd_SecU[2]  ; Clk        ; 9.231  ; 9.809  ; Rise       ; Clk             ;
+;  ssd_SecU[3]  ; Clk        ; 8.798  ; 9.187  ; Rise       ; Clk             ;
+;  ssd_SecU[4]  ; Clk        ; 9.490  ; 10.221 ; Rise       ; Clk             ;
+;  ssd_SecU[5]  ; Clk        ; 8.993  ; 9.612  ; Rise       ; Clk             ;
+;  ssd_SecU[6]  ; Clk        ; 8.521  ; 8.366  ; Rise       ; Clk             ;
++---------------+------------+--------+--------+------------+-----------------+
 
 
 ---------------------------------------------
@@ -538,7 +538,7 @@ No synchronizer chains to report.
 +-------+--------+--------------------+
 ; Clock ; Slack  ; End Point TNS      ;
 +-------+--------+--------------------+
-; Clk   ; -1.744 ; -108.509           ;
+; Clk   ; -2.227 ; -121.538           ;
 +-------+--------+--------------------+
 
 
@@ -547,7 +547,7 @@ No synchronizer chains to report.
 +-------+-------+--------------------+
 ; Clock ; Slack ; End Point TNS      ;
 +-------+-------+--------------------+
-; Clk   ; 0.178 ; 0.000              ;
+; Clk   ; 0.177 ; 0.000              ;
 +-------+-------+--------------------+
 
 
@@ -568,7 +568,7 @@ No paths to report.
 +-------+--------+----------------------------------+
 ; Clock ; Slack  ; End Point TNS                    ;
 +-------+--------+----------------------------------+
-; Clk   ; -0.092 ; -6.989                           ;
+; Clk   ; -0.091 ; -6.480                           ;
 +-------+--------+----------------------------------+
 
 
@@ -577,16 +577,16 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; ADJUST        ; Clk        ; 1.590 ; 2.358 ; Rise       ; Clk             ;
-; NEW_VALUE[*]  ; Clk        ; 1.523 ; 2.249 ; Rise       ; Clk             ;
-;  NEW_VALUE[0] ; Clk        ; 1.346 ; 2.035 ; Rise       ; Clk             ;
-;  NEW_VALUE[1] ; Clk        ; 1.355 ; 2.086 ; Rise       ; Clk             ;
-;  NEW_VALUE[2] ; Clk        ; 1.478 ; 2.249 ; Rise       ; Clk             ;
-;  NEW_VALUE[3] ; Clk        ; 1.523 ; 2.024 ; Rise       ; Clk             ;
-; SEL_EVENT     ; Clk        ; 0.493 ; 1.073 ; Rise       ; Clk             ;
-; SPEED_FAC[*]  ; Clk        ; 2.632 ; 3.017 ; Rise       ; Clk             ;
-;  SPEED_FAC[0] ; Clk        ; 2.632 ; 3.017 ; Rise       ; Clk             ;
-;  SPEED_FAC[1] ; Clk        ; 2.495 ; 2.893 ; Rise       ; Clk             ;
+; ADJUST        ; Clk        ; 1.393 ; 2.370 ; Rise       ; Clk             ;
+; ENTER_VALUE   ; Clk        ; 0.995 ; 1.669 ; Rise       ; Clk             ;
+; NEW_VALUE[*]  ; Clk        ; 2.095 ; 3.455 ; Rise       ; Clk             ;
+;  NEW_VALUE[0] ; Clk        ; 1.523 ; 2.455 ; Rise       ; Clk             ;
+;  NEW_VALUE[1] ; Clk        ; 1.525 ; 2.728 ; Rise       ; Clk             ;
+;  NEW_VALUE[2] ; Clk        ; 2.095 ; 3.455 ; Rise       ; Clk             ;
+;  NEW_VALUE[3] ; Clk        ; 1.728 ; 3.044 ; Rise       ; Clk             ;
+; SPEED_FAC[*]  ; Clk        ; 2.667 ; 3.251 ; Rise       ; Clk             ;
+;  SPEED_FAC[0] ; Clk        ; 2.473 ; 3.091 ; Rise       ; Clk             ;
+;  SPEED_FAC[1] ; Clk        ; 2.667 ; 3.251 ; Rise       ; Clk             ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -595,16 +595,16 @@ No paths to report.
 +---------------+------------+--------+--------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +---------------+------------+--------+--------+------------+-----------------+
-; ADJUST        ; Clk        ; -0.246 ; -0.836 ; Rise       ; Clk             ;
-; NEW_VALUE[*]  ; Clk        ; -0.051 ; -0.593 ; Rise       ; Clk             ;
-;  NEW_VALUE[0] ; Clk        ; -0.522 ; -1.110 ; Rise       ; Clk             ;
-;  NEW_VALUE[1] ; Clk        ; -0.131 ; -0.734 ; Rise       ; Clk             ;
-;  NEW_VALUE[2] ; Clk        ; -0.252 ; -0.876 ; Rise       ; Clk             ;
-;  NEW_VALUE[3] ; Clk        ; -0.051 ; -0.593 ; Rise       ; Clk             ;
-; SEL_EVENT     ; Clk        ; 0.419  ; -0.172 ; Rise       ; Clk             ;
-; SPEED_FAC[*]  ; Clk        ; -0.640 ; -1.260 ; Rise       ; Clk             ;
-;  SPEED_FAC[0] ; Clk        ; -0.640 ; -1.260 ; Rise       ; Clk             ;
-;  SPEED_FAC[1] ; Clk        ; -0.694 ; -1.311 ; Rise       ; Clk             ;
+; ADJUST        ; Clk        ; 0.012  ; -0.553 ; Rise       ; Clk             ;
+; ENTER_VALUE   ; Clk        ; 0.078  ; -0.596 ; Rise       ; Clk             ;
+; NEW_VALUE[*]  ; Clk        ; -0.273 ; -1.031 ; Rise       ; Clk             ;
+;  NEW_VALUE[0] ; Clk        ; -0.465 ; -1.125 ; Rise       ; Clk             ;
+;  NEW_VALUE[1] ; Clk        ; -0.273 ; -1.031 ; Rise       ; Clk             ;
+;  NEW_VALUE[2] ; Clk        ; -0.752 ; -1.565 ; Rise       ; Clk             ;
+;  NEW_VALUE[3] ; Clk        ; -0.424 ; -1.197 ; Rise       ; Clk             ;
+; SPEED_FAC[*]  ; Clk        ; -0.156 ; -0.727 ; Rise       ; Clk             ;
+;  SPEED_FAC[0] ; Clk        ; -0.156 ; -0.727 ; Rise       ; Clk             ;
+;  SPEED_FAC[1] ; Clk        ; -0.454 ; -1.150 ; Rise       ; Clk             ;
 +---------------+------------+--------+--------+------------+-----------------+
 
 
@@ -613,53 +613,53 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; ssd_HourT[*]  ; Clk        ; 6.331 ; 7.179 ; Rise       ; Clk             ;
-;  ssd_HourT[0] ; Clk        ; 6.331 ; 7.179 ; Rise       ; Clk             ;
-;  ssd_HourT[2] ; Clk        ; 5.450 ; 5.840 ; Rise       ; Clk             ;
-;  ssd_HourT[3] ; Clk        ; 6.121 ; 6.869 ; Rise       ; Clk             ;
-;  ssd_HourT[4] ; Clk        ; 5.145 ; 5.627 ; Rise       ; Clk             ;
-;  ssd_HourT[5] ; Clk        ; 5.986 ; 5.569 ; Rise       ; Clk             ;
-;  ssd_HourT[6] ; Clk        ; 5.675 ; 5.178 ; Rise       ; Clk             ;
-; ssd_HourU[*]  ; Clk        ; 5.920 ; 6.396 ; Rise       ; Clk             ;
-;  ssd_HourU[0] ; Clk        ; 5.523 ; 6.047 ; Rise       ; Clk             ;
-;  ssd_HourU[1] ; Clk        ; 5.743 ; 6.396 ; Rise       ; Clk             ;
-;  ssd_HourU[2] ; Clk        ; 5.791 ; 6.350 ; Rise       ; Clk             ;
-;  ssd_HourU[3] ; Clk        ; 5.479 ; 5.961 ; Rise       ; Clk             ;
-;  ssd_HourU[4] ; Clk        ; 5.775 ; 6.360 ; Rise       ; Clk             ;
-;  ssd_HourU[5] ; Clk        ; 5.617 ; 5.966 ; Rise       ; Clk             ;
-;  ssd_HourU[6] ; Clk        ; 5.920 ; 5.466 ; Rise       ; Clk             ;
-; ssd_MinT[*]   ; Clk        ; 6.386 ; 7.285 ; Rise       ; Clk             ;
-;  ssd_MinT[0]  ; Clk        ; 6.386 ; 7.031 ; Rise       ; Clk             ;
-;  ssd_MinT[1]  ; Clk        ; 6.303 ; 6.833 ; Rise       ; Clk             ;
-;  ssd_MinT[2]  ; Clk        ; 5.980 ; 6.124 ; Rise       ; Clk             ;
-;  ssd_MinT[3]  ; Clk        ; 6.106 ; 6.572 ; Rise       ; Clk             ;
-;  ssd_MinT[4]  ; Clk        ; 6.336 ; 7.285 ; Rise       ; Clk             ;
-;  ssd_MinT[5]  ; Clk        ; 5.799 ; 6.357 ; Rise       ; Clk             ;
-;  ssd_MinT[6]  ; Clk        ; 5.625 ; 6.146 ; Rise       ; Clk             ;
-; ssd_MinU[*]   ; Clk        ; 6.303 ; 7.049 ; Rise       ; Clk             ;
-;  ssd_MinU[0]  ; Clk        ; 5.490 ; 5.727 ; Rise       ; Clk             ;
-;  ssd_MinU[1]  ; Clk        ; 6.134 ; 6.660 ; Rise       ; Clk             ;
-;  ssd_MinU[2]  ; Clk        ; 6.303 ; 7.049 ; Rise       ; Clk             ;
-;  ssd_MinU[3]  ; Clk        ; 6.197 ; 6.884 ; Rise       ; Clk             ;
-;  ssd_MinU[4]  ; Clk        ; 5.925 ; 6.372 ; Rise       ; Clk             ;
-;  ssd_MinU[5]  ; Clk        ; 5.941 ; 6.559 ; Rise       ; Clk             ;
-;  ssd_MinU[6]  ; Clk        ; 6.279 ; 5.890 ; Rise       ; Clk             ;
-; ssd_SecT[*]   ; Clk        ; 6.080 ; 6.780 ; Rise       ; Clk             ;
-;  ssd_SecT[0]  ; Clk        ; 5.723 ; 6.218 ; Rise       ; Clk             ;
-;  ssd_SecT[1]  ; Clk        ; 5.610 ; 6.079 ; Rise       ; Clk             ;
-;  ssd_SecT[2]  ; Clk        ; 6.080 ; 6.780 ; Rise       ; Clk             ;
-;  ssd_SecT[3]  ; Clk        ; 5.825 ; 6.471 ; Rise       ; Clk             ;
-;  ssd_SecT[4]  ; Clk        ; 5.880 ; 6.485 ; Rise       ; Clk             ;
-;  ssd_SecT[5]  ; Clk        ; 6.045 ; 6.698 ; Rise       ; Clk             ;
-;  ssd_SecT[6]  ; Clk        ; 5.538 ; 6.032 ; Rise       ; Clk             ;
-; ssd_SecU[*]   ; Clk        ; 6.154 ; 6.279 ; Rise       ; Clk             ;
-;  ssd_SecU[0]  ; Clk        ; 5.599 ; 5.984 ; Rise       ; Clk             ;
-;  ssd_SecU[1]  ; Clk        ; 5.408 ; 5.749 ; Rise       ; Clk             ;
-;  ssd_SecU[2]  ; Clk        ; 5.612 ; 6.256 ; Rise       ; Clk             ;
-;  ssd_SecU[3]  ; Clk        ; 5.446 ; 5.920 ; Rise       ; Clk             ;
-;  ssd_SecU[4]  ; Clk        ; 5.776 ; 6.276 ; Rise       ; Clk             ;
-;  ssd_SecU[5]  ; Clk        ; 5.739 ; 6.279 ; Rise       ; Clk             ;
-;  ssd_SecU[6]  ; Clk        ; 6.154 ; 5.555 ; Rise       ; Clk             ;
+; ssd_HourT[*]  ; Clk        ; 7.050 ; 7.929 ; Rise       ; Clk             ;
+;  ssd_HourT[0] ; Clk        ; 7.050 ; 7.929 ; Rise       ; Clk             ;
+;  ssd_HourT[2] ; Clk        ; 6.281 ; 7.066 ; Rise       ; Clk             ;
+;  ssd_HourT[3] ; Clk        ; 6.836 ; 7.599 ; Rise       ; Clk             ;
+;  ssd_HourT[4] ; Clk        ; 5.865 ; 6.679 ; Rise       ; Clk             ;
+;  ssd_HourT[5] ; Clk        ; 6.380 ; 6.106 ; Rise       ; Clk             ;
+;  ssd_HourT[6] ; Clk        ; 6.375 ; 5.669 ; Rise       ; Clk             ;
+; ssd_HourU[*]  ; Clk        ; 7.574 ; 7.373 ; Rise       ; Clk             ;
+;  ssd_HourU[0] ; Clk        ; 6.172 ; 6.843 ; Rise       ; Clk             ;
+;  ssd_HourU[1] ; Clk        ; 6.059 ; 6.856 ; Rise       ; Clk             ;
+;  ssd_HourU[2] ; Clk        ; 6.379 ; 7.373 ; Rise       ; Clk             ;
+;  ssd_HourU[3] ; Clk        ; 6.218 ; 6.929 ; Rise       ; Clk             ;
+;  ssd_HourU[4] ; Clk        ; 6.179 ; 6.713 ; Rise       ; Clk             ;
+;  ssd_HourU[5] ; Clk        ; 6.282 ; 6.999 ; Rise       ; Clk             ;
+;  ssd_HourU[6] ; Clk        ; 7.574 ; 6.568 ; Rise       ; Clk             ;
+; ssd_MinT[*]   ; Clk        ; 6.823 ; 7.937 ; Rise       ; Clk             ;
+;  ssd_MinT[0]  ; Clk        ; 6.125 ; 6.591 ; Rise       ; Clk             ;
+;  ssd_MinT[1]  ; Clk        ; 6.806 ; 7.933 ; Rise       ; Clk             ;
+;  ssd_MinT[2]  ; Clk        ; 6.116 ; 6.494 ; Rise       ; Clk             ;
+;  ssd_MinT[3]  ; Clk        ; 6.096 ; 6.641 ; Rise       ; Clk             ;
+;  ssd_MinT[4]  ; Clk        ; 6.823 ; 7.937 ; Rise       ; Clk             ;
+;  ssd_MinT[5]  ; Clk        ; 6.204 ; 6.537 ; Rise       ; Clk             ;
+;  ssd_MinT[6]  ; Clk        ; 5.977 ; 6.479 ; Rise       ; Clk             ;
+; ssd_MinU[*]   ; Clk        ; 7.667 ; 8.293 ; Rise       ; Clk             ;
+;  ssd_MinU[0]  ; Clk        ; 6.790 ; 6.941 ; Rise       ; Clk             ;
+;  ssd_MinU[1]  ; Clk        ; 7.037 ; 7.414 ; Rise       ; Clk             ;
+;  ssd_MinU[2]  ; Clk        ; 7.667 ; 8.293 ; Rise       ; Clk             ;
+;  ssd_MinU[3]  ; Clk        ; 7.288 ; 7.709 ; Rise       ; Clk             ;
+;  ssd_MinU[4]  ; Clk        ; 7.220 ; 7.564 ; Rise       ; Clk             ;
+;  ssd_MinU[5]  ; Clk        ; 7.166 ; 7.466 ; Rise       ; Clk             ;
+;  ssd_MinU[6]  ; Clk        ; 7.360 ; 7.136 ; Rise       ; Clk             ;
+; ssd_SecT[*]   ; Clk        ; 7.039 ; 7.411 ; Rise       ; Clk             ;
+;  ssd_SecT[0]  ; Clk        ; 6.858 ; 7.136 ; Rise       ; Clk             ;
+;  ssd_SecT[1]  ; Clk        ; 6.936 ; 7.306 ; Rise       ; Clk             ;
+;  ssd_SecT[2]  ; Clk        ; 7.039 ; 7.234 ; Rise       ; Clk             ;
+;  ssd_SecT[3]  ; Clk        ; 7.000 ; 7.396 ; Rise       ; Clk             ;
+;  ssd_SecT[4]  ; Clk        ; 6.822 ; 7.411 ; Rise       ; Clk             ;
+;  ssd_SecT[5]  ; Clk        ; 6.971 ; 7.359 ; Rise       ; Clk             ;
+;  ssd_SecT[6]  ; Clk        ; 6.707 ; 6.997 ; Rise       ; Clk             ;
+; ssd_SecU[*]   ; Clk        ; 6.760 ; 7.389 ; Rise       ; Clk             ;
+;  ssd_SecU[0]  ; Clk        ; 6.466 ; 7.109 ; Rise       ; Clk             ;
+;  ssd_SecU[1]  ; Clk        ; 6.405 ; 7.303 ; Rise       ; Clk             ;
+;  ssd_SecU[2]  ; Clk        ; 6.517 ; 7.370 ; Rise       ; Clk             ;
+;  ssd_SecU[3]  ; Clk        ; 6.269 ; 6.682 ; Rise       ; Clk             ;
+;  ssd_SecU[4]  ; Clk        ; 6.760 ; 7.389 ; Rise       ; Clk             ;
+;  ssd_SecU[5]  ; Clk        ; 6.159 ; 6.953 ; Rise       ; Clk             ;
+;  ssd_SecU[6]  ; Clk        ; 6.097 ; 5.787 ; Rise       ; Clk             ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -668,53 +668,53 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; ssd_HourT[*]  ; Clk        ; 4.861 ; 4.888 ; Rise       ; Clk             ;
-;  ssd_HourT[0] ; Clk        ; 5.804 ; 6.428 ; Rise       ; Clk             ;
-;  ssd_HourT[2] ; Clk        ; 5.080 ; 5.344 ; Rise       ; Clk             ;
-;  ssd_HourT[3] ; Clk        ; 5.615 ; 6.163 ; Rise       ; Clk             ;
-;  ssd_HourT[4] ; Clk        ; 4.861 ; 5.210 ; Rise       ; Clk             ;
-;  ssd_HourT[5] ; Clk        ; 5.457 ; 5.129 ; Rise       ; Clk             ;
-;  ssd_HourT[6] ; Clk        ; 5.240 ; 4.888 ; Rise       ; Clk             ;
-; ssd_HourU[*]  ; Clk        ; 5.007 ; 5.029 ; Rise       ; Clk             ;
-;  ssd_HourU[0] ; Clk        ; 5.035 ; 5.420 ; Rise       ; Clk             ;
-;  ssd_HourU[1] ; Clk        ; 5.231 ; 5.690 ; Rise       ; Clk             ;
-;  ssd_HourU[2] ; Clk        ; 5.217 ; 5.636 ; Rise       ; Clk             ;
-;  ssd_HourU[3] ; Clk        ; 5.007 ; 5.335 ; Rise       ; Clk             ;
-;  ssd_HourU[4] ; Clk        ; 5.257 ; 5.697 ; Rise       ; Clk             ;
-;  ssd_HourU[5] ; Clk        ; 5.079 ; 5.406 ; Rise       ; Clk             ;
-;  ssd_HourU[6] ; Clk        ; 5.346 ; 5.029 ; Rise       ; Clk             ;
-; ssd_MinT[*]   ; Clk        ; 5.023 ; 5.256 ; Rise       ; Clk             ;
-;  ssd_MinT[0]  ; Clk        ; 5.450 ; 5.937 ; Rise       ; Clk             ;
-;  ssd_MinT[1]  ; Clk        ; 5.403 ; 5.797 ; Rise       ; Clk             ;
-;  ssd_MinT[2]  ; Clk        ; 5.254 ; 5.497 ; Rise       ; Clk             ;
-;  ssd_MinT[3]  ; Clk        ; 5.202 ; 5.535 ; Rise       ; Clk             ;
-;  ssd_MinT[4]  ; Clk        ; 5.696 ; 6.206 ; Rise       ; Clk             ;
-;  ssd_MinT[5]  ; Clk        ; 5.278 ; 5.534 ; Rise       ; Clk             ;
-;  ssd_MinT[6]  ; Clk        ; 5.023 ; 5.256 ; Rise       ; Clk             ;
-; ssd_MinU[*]   ; Clk        ; 4.823 ; 4.993 ; Rise       ; Clk             ;
-;  ssd_MinU[0]  ; Clk        ; 4.823 ; 4.993 ; Rise       ; Clk             ;
-;  ssd_MinU[1]  ; Clk        ; 5.505 ; 6.024 ; Rise       ; Clk             ;
-;  ssd_MinU[2]  ; Clk        ; 5.644 ; 6.211 ; Rise       ; Clk             ;
-;  ssd_MinU[3]  ; Clk        ; 5.431 ; 5.925 ; Rise       ; Clk             ;
-;  ssd_MinU[4]  ; Clk        ; 5.225 ; 5.589 ; Rise       ; Clk             ;
-;  ssd_MinU[5]  ; Clk        ; 5.292 ; 5.729 ; Rise       ; Clk             ;
-;  ssd_MinU[6]  ; Clk        ; 5.499 ; 5.154 ; Rise       ; Clk             ;
-; ssd_SecT[*]   ; Clk        ; 4.955 ; 5.278 ; Rise       ; Clk             ;
-;  ssd_SecT[0]  ; Clk        ; 5.237 ; 5.619 ; Rise       ; Clk             ;
-;  ssd_SecT[1]  ; Clk        ; 4.955 ; 5.278 ; Rise       ; Clk             ;
-;  ssd_SecT[2]  ; Clk        ; 5.530 ; 6.112 ; Rise       ; Clk             ;
-;  ssd_SecT[3]  ; Clk        ; 5.382 ; 5.916 ; Rise       ; Clk             ;
-;  ssd_SecT[4]  ; Clk        ; 5.398 ; 5.800 ; Rise       ; Clk             ;
-;  ssd_SecT[5]  ; Clk        ; 5.511 ; 6.026 ; Rise       ; Clk             ;
-;  ssd_SecT[6]  ; Clk        ; 5.094 ; 5.492 ; Rise       ; Clk             ;
-; ssd_SecU[*]   ; Clk        ; 4.932 ; 5.043 ; Rise       ; Clk             ;
-;  ssd_SecU[0]  ; Clk        ; 4.987 ; 5.329 ; Rise       ; Clk             ;
-;  ssd_SecU[1]  ; Clk        ; 4.932 ; 5.204 ; Rise       ; Clk             ;
-;  ssd_SecU[2]  ; Clk        ; 5.137 ; 5.544 ; Rise       ; Clk             ;
-;  ssd_SecU[3]  ; Clk        ; 4.950 ; 5.291 ; Rise       ; Clk             ;
-;  ssd_SecU[4]  ; Clk        ; 5.156 ; 5.559 ; Rise       ; Clk             ;
-;  ssd_SecU[5]  ; Clk        ; 5.234 ; 5.651 ; Rise       ; Clk             ;
-;  ssd_SecU[6]  ; Clk        ; 5.401 ; 5.043 ; Rise       ; Clk             ;
+; ssd_HourT[*]  ; Clk        ; 5.498 ; 5.327 ; Rise       ; Clk             ;
+;  ssd_HourT[0] ; Clk        ; 6.308 ; 7.205 ; Rise       ; Clk             ;
+;  ssd_HourT[2] ; Clk        ; 5.877 ; 6.299 ; Rise       ; Clk             ;
+;  ssd_HourT[3] ; Clk        ; 6.123 ; 6.919 ; Rise       ; Clk             ;
+;  ssd_HourT[4] ; Clk        ; 5.498 ; 6.095 ; Rise       ; Clk             ;
+;  ssd_HourT[5] ; Clk        ; 5.805 ; 5.585 ; Rise       ; Clk             ;
+;  ssd_HourT[6] ; Clk        ; 5.839 ; 5.327 ; Rise       ; Clk             ;
+; ssd_HourU[*]  ; Clk        ; 5.565 ; 5.862 ; Rise       ; Clk             ;
+;  ssd_HourU[0] ; Clk        ; 5.623 ; 6.174 ; Rise       ; Clk             ;
+;  ssd_HourU[1] ; Clk        ; 5.565 ; 6.133 ; Rise       ; Clk             ;
+;  ssd_HourU[2] ; Clk        ; 5.902 ; 6.594 ; Rise       ; Clk             ;
+;  ssd_HourU[3] ; Clk        ; 5.604 ; 6.210 ; Rise       ; Clk             ;
+;  ssd_HourU[4] ; Clk        ; 5.704 ; 6.224 ; Rise       ; Clk             ;
+;  ssd_HourU[5] ; Clk        ; 5.710 ; 6.326 ; Rise       ; Clk             ;
+;  ssd_HourU[6] ; Clk        ; 6.585 ; 5.862 ; Rise       ; Clk             ;
+; ssd_MinT[*]   ; Clk        ; 5.417 ; 5.761 ; Rise       ; Clk             ;
+;  ssd_MinT[0]  ; Clk        ; 5.581 ; 5.960 ; Rise       ; Clk             ;
+;  ssd_MinT[1]  ; Clk        ; 6.109 ; 6.805 ; Rise       ; Clk             ;
+;  ssd_MinT[2]  ; Clk        ; 5.417 ; 5.868 ; Rise       ; Clk             ;
+;  ssd_MinT[3]  ; Clk        ; 5.455 ; 5.845 ; Rise       ; Clk             ;
+;  ssd_MinT[4]  ; Clk        ; 6.155 ; 6.808 ; Rise       ; Clk             ;
+;  ssd_MinT[5]  ; Clk        ; 5.469 ; 5.978 ; Rise       ; Clk             ;
+;  ssd_MinT[6]  ; Clk        ; 5.419 ; 5.761 ; Rise       ; Clk             ;
+; ssd_MinU[*]   ; Clk        ; 5.575 ; 5.486 ; Rise       ; Clk             ;
+;  ssd_MinU[0]  ; Clk        ; 5.575 ; 5.486 ; Rise       ; Clk             ;
+;  ssd_MinU[1]  ; Clk        ; 5.710 ; 6.206 ; Rise       ; Clk             ;
+;  ssd_MinU[2]  ; Clk        ; 6.204 ; 7.003 ; Rise       ; Clk             ;
+;  ssd_MinU[3]  ; Clk        ; 6.126 ; 6.211 ; Rise       ; Clk             ;
+;  ssd_MinU[4]  ; Clk        ; 6.003 ; 6.063 ; Rise       ; Clk             ;
+;  ssd_MinU[5]  ; Clk        ; 6.002 ; 6.026 ; Rise       ; Clk             ;
+;  ssd_MinU[6]  ; Clk        ; 6.246 ; 5.900 ; Rise       ; Clk             ;
+; ssd_SecT[*]   ; Clk        ; 5.623 ; 5.802 ; Rise       ; Clk             ;
+;  ssd_SecT[0]  ; Clk        ; 5.747 ; 6.008 ; Rise       ; Clk             ;
+;  ssd_SecT[1]  ; Clk        ; 5.837 ; 6.132 ; Rise       ; Clk             ;
+;  ssd_SecT[2]  ; Clk        ; 5.966 ; 6.259 ; Rise       ; Clk             ;
+;  ssd_SecT[3]  ; Clk        ; 5.896 ; 6.217 ; Rise       ; Clk             ;
+;  ssd_SecT[4]  ; Clk        ; 5.921 ; 6.264 ; Rise       ; Clk             ;
+;  ssd_SecT[5]  ; Clk        ; 5.917 ; 6.255 ; Rise       ; Clk             ;
+;  ssd_SecT[6]  ; Clk        ; 5.623 ; 5.802 ; Rise       ; Clk             ;
+; ssd_SecU[*]   ; Clk        ; 5.325 ; 5.155 ; Rise       ; Clk             ;
+;  ssd_SecU[0]  ; Clk        ; 5.656 ; 6.145 ; Rise       ; Clk             ;
+;  ssd_SecU[1]  ; Clk        ; 5.724 ; 6.242 ; Rise       ; Clk             ;
+;  ssd_SecU[2]  ; Clk        ; 5.770 ; 6.295 ; Rise       ; Clk             ;
+;  ssd_SecU[3]  ; Clk        ; 5.430 ; 5.794 ; Rise       ; Clk             ;
+;  ssd_SecU[4]  ; Clk        ; 5.920 ; 6.597 ; Rise       ; Clk             ;
+;  ssd_SecU[5]  ; Clk        ; 5.615 ; 6.216 ; Rise       ; Clk             ;
+;  ssd_SecU[6]  ; Clk        ; 5.325 ; 5.155 ; Rise       ; Clk             ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -729,7 +729,7 @@ No synchronizer chains to report.
 +-------+--------+-------------------+
 ; Clock ; Slack  ; End Point TNS     ;
 +-------+--------+-------------------+
-; Clk   ; -1.564 ; -95.042           ;
+; Clk   ; -2.016 ; -108.183          ;
 +-------+--------+-------------------+
 
 
@@ -738,7 +738,7 @@ No synchronizer chains to report.
 +-------+-------+-------------------+
 ; Clock ; Slack ; End Point TNS     ;
 +-------+-------+-------------------+
-; Clk   ; 0.170 ; 0.000             ;
+; Clk   ; 0.169 ; 0.000             ;
 +-------+-------+-------------------+
 
 
@@ -759,7 +759,7 @@ No paths to report.
 +-------+--------+---------------------------------+
 ; Clock ; Slack  ; End Point TNS                   ;
 +-------+--------+---------------------------------+
-; Clk   ; -0.090 ; -6.892                          ;
+; Clk   ; -0.090 ; -6.491                          ;
 +-------+--------+---------------------------------+
 
 
@@ -768,16 +768,16 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; ADJUST        ; Clk        ; 1.410 ; 2.190 ; Rise       ; Clk             ;
-; NEW_VALUE[*]  ; Clk        ; 1.350 ; 2.127 ; Rise       ; Clk             ;
-;  NEW_VALUE[0] ; Clk        ; 1.169 ; 1.881 ; Rise       ; Clk             ;
-;  NEW_VALUE[1] ; Clk        ; 1.192 ; 1.928 ; Rise       ; Clk             ;
-;  NEW_VALUE[2] ; Clk        ; 1.347 ; 2.127 ; Rise       ; Clk             ;
-;  NEW_VALUE[3] ; Clk        ; 1.350 ; 1.868 ; Rise       ; Clk             ;
-; SEL_EVENT     ; Clk        ; 0.406 ; 0.992 ; Rise       ; Clk             ;
-; SPEED_FAC[*]  ; Clk        ; 2.320 ; 2.757 ; Rise       ; Clk             ;
-;  SPEED_FAC[0] ; Clk        ; 2.320 ; 2.757 ; Rise       ; Clk             ;
-;  SPEED_FAC[1] ; Clk        ; 2.182 ; 2.635 ; Rise       ; Clk             ;
+; ADJUST        ; Clk        ; 1.254 ; 2.211 ; Rise       ; Clk             ;
+; ENTER_VALUE   ; Clk        ; 0.920 ; 1.584 ; Rise       ; Clk             ;
+; NEW_VALUE[*]  ; Clk        ; 1.998 ; 3.254 ; Rise       ; Clk             ;
+;  NEW_VALUE[0] ; Clk        ; 1.410 ; 2.282 ; Rise       ; Clk             ;
+;  NEW_VALUE[1] ; Clk        ; 1.435 ; 2.543 ; Rise       ; Clk             ;
+;  NEW_VALUE[2] ; Clk        ; 1.998 ; 3.254 ; Rise       ; Clk             ;
+;  NEW_VALUE[3] ; Clk        ; 1.602 ; 2.815 ; Rise       ; Clk             ;
+; SPEED_FAC[*]  ; Clk        ; 2.423 ; 3.015 ; Rise       ; Clk             ;
+;  SPEED_FAC[0] ; Clk        ; 2.217 ; 2.849 ; Rise       ; Clk             ;
+;  SPEED_FAC[1] ; Clk        ; 2.423 ; 3.015 ; Rise       ; Clk             ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -786,16 +786,16 @@ No paths to report.
 +---------------+------------+--------+--------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +---------------+------------+--------+--------+------------+-----------------+
-; ADJUST        ; Clk        ; -0.140 ; -0.743 ; Rise       ; Clk             ;
-; NEW_VALUE[*]  ; Clk        ; 0.034  ; -0.539 ; Rise       ; Clk             ;
-;  NEW_VALUE[0] ; Clk        ; -0.385 ; -0.994 ; Rise       ; Clk             ;
-;  NEW_VALUE[1] ; Clk        ; -0.034 ; -0.650 ; Rise       ; Clk             ;
-;  NEW_VALUE[2] ; Clk        ; -0.183 ; -0.823 ; Rise       ; Clk             ;
-;  NEW_VALUE[3] ; Clk        ; 0.034  ; -0.539 ; Rise       ; Clk             ;
-; SEL_EVENT     ; Clk        ; 0.472  ; -0.130 ; Rise       ; Clk             ;
-; SPEED_FAC[*]  ; Clk        ; -0.512 ; -1.151 ; Rise       ; Clk             ;
-;  SPEED_FAC[0] ; Clk        ; -0.512 ; -1.151 ; Rise       ; Clk             ;
-;  SPEED_FAC[1] ; Clk        ; -0.568 ; -1.199 ; Rise       ; Clk             ;
+; ADJUST        ; Clk        ; 0.064  ; -0.521 ; Rise       ; Clk             ;
+; ENTER_VALUE   ; Clk        ; 0.095  ; -0.570 ; Rise       ; Clk             ;
+; NEW_VALUE[*]  ; Clk        ; -0.240 ; -0.966 ; Rise       ; Clk             ;
+;  NEW_VALUE[0] ; Clk        ; -0.401 ; -1.055 ; Rise       ; Clk             ;
+;  NEW_VALUE[1] ; Clk        ; -0.240 ; -0.966 ; Rise       ; Clk             ;
+;  NEW_VALUE[2] ; Clk        ; -0.720 ; -1.517 ; Rise       ; Clk             ;
+;  NEW_VALUE[3] ; Clk        ; -0.374 ; -1.131 ; Rise       ; Clk             ;
+; SPEED_FAC[*]  ; Clk        ; -0.054 ; -0.646 ; Rise       ; Clk             ;
+;  SPEED_FAC[0] ; Clk        ; -0.054 ; -0.646 ; Rise       ; Clk             ;
+;  SPEED_FAC[1] ; Clk        ; -0.361 ; -1.049 ; Rise       ; Clk             ;
 +---------------+------------+--------+--------+------------+-----------------+
 
 
@@ -804,53 +804,53 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; ssd_HourT[*]  ; Clk        ; 6.056 ; 6.767 ; Rise       ; Clk             ;
-;  ssd_HourT[0] ; Clk        ; 6.056 ; 6.767 ; Rise       ; Clk             ;
-;  ssd_HourT[2] ; Clk        ; 5.114 ; 5.464 ; Rise       ; Clk             ;
-;  ssd_HourT[3] ; Clk        ; 5.860 ; 6.482 ; Rise       ; Clk             ;
-;  ssd_HourT[4] ; Clk        ; 4.928 ; 5.314 ; Rise       ; Clk             ;
-;  ssd_HourT[5] ; Clk        ; 5.627 ; 5.251 ; Rise       ; Clk             ;
-;  ssd_HourT[6] ; Clk        ; 5.370 ; 4.975 ; Rise       ; Clk             ;
-; ssd_HourU[*]  ; Clk        ; 5.559 ; 6.045 ; Rise       ; Clk             ;
-;  ssd_HourU[0] ; Clk        ; 5.283 ; 5.725 ; Rise       ; Clk             ;
-;  ssd_HourU[1] ; Clk        ; 5.495 ; 6.045 ; Rise       ; Clk             ;
-;  ssd_HourU[2] ; Clk        ; 5.499 ; 5.965 ; Rise       ; Clk             ;
-;  ssd_HourU[3] ; Clk        ; 5.226 ; 5.630 ; Rise       ; Clk             ;
-;  ssd_HourU[4] ; Clk        ; 5.521 ; 6.008 ; Rise       ; Clk             ;
-;  ssd_HourU[5] ; Clk        ; 5.310 ; 5.618 ; Rise       ; Clk             ;
-;  ssd_HourU[6] ; Clk        ; 5.559 ; 5.155 ; Rise       ; Clk             ;
-; ssd_MinT[*]   ; Clk        ; 6.069 ; 6.854 ; Rise       ; Clk             ;
-;  ssd_MinT[0]  ; Clk        ; 6.069 ; 6.626 ; Rise       ; Clk             ;
-;  ssd_MinT[1]  ; Clk        ; 5.991 ; 6.430 ; Rise       ; Clk             ;
-;  ssd_MinT[2]  ; Clk        ; 5.647 ; 5.769 ; Rise       ; Clk             ;
-;  ssd_MinT[3]  ; Clk        ; 5.791 ; 6.180 ; Rise       ; Clk             ;
-;  ssd_MinT[4]  ; Clk        ; 6.066 ; 6.854 ; Rise       ; Clk             ;
-;  ssd_MinT[5]  ; Clk        ; 5.504 ; 5.978 ; Rise       ; Clk             ;
-;  ssd_MinT[6]  ; Clk        ; 5.333 ; 5.779 ; Rise       ; Clk             ;
-; ssd_MinU[*]   ; Clk        ; 6.013 ; 6.628 ; Rise       ; Clk             ;
-;  ssd_MinU[0]  ; Clk        ; 5.190 ; 5.391 ; Rise       ; Clk             ;
-;  ssd_MinU[1]  ; Clk        ; 5.843 ; 6.272 ; Rise       ; Clk             ;
-;  ssd_MinU[2]  ; Clk        ; 6.013 ; 6.628 ; Rise       ; Clk             ;
-;  ssd_MinU[3]  ; Clk        ; 5.930 ; 6.496 ; Rise       ; Clk             ;
-;  ssd_MinU[4]  ; Clk        ; 5.597 ; 5.972 ; Rise       ; Clk             ;
-;  ssd_MinU[5]  ; Clk        ; 5.665 ; 6.172 ; Rise       ; Clk             ;
-;  ssd_MinU[6]  ; Clk        ; 5.890 ; 5.554 ; Rise       ; Clk             ;
-; ssd_SecT[*]   ; Clk        ; 5.829 ; 6.399 ; Rise       ; Clk             ;
-;  ssd_SecT[0]  ; Clk        ; 5.486 ; 5.884 ; Rise       ; Clk             ;
-;  ssd_SecT[1]  ; Clk        ; 5.355 ; 5.731 ; Rise       ; Clk             ;
-;  ssd_SecT[2]  ; Clk        ; 5.829 ; 6.399 ; Rise       ; Clk             ;
-;  ssd_SecT[3]  ; Clk        ; 5.561 ; 6.092 ; Rise       ; Clk             ;
-;  ssd_SecT[4]  ; Clk        ; 5.636 ; 6.124 ; Rise       ; Clk             ;
-;  ssd_SecT[5]  ; Clk        ; 5.794 ; 6.324 ; Rise       ; Clk             ;
-;  ssd_SecT[6]  ; Clk        ; 5.284 ; 5.682 ; Rise       ; Clk             ;
-; ssd_SecU[*]   ; Clk        ; 5.789 ; 5.935 ; Rise       ; Clk             ;
-;  ssd_SecU[0]  ; Clk        ; 5.352 ; 5.665 ; Rise       ; Clk             ;
-;  ssd_SecU[1]  ; Clk        ; 5.168 ; 5.438 ; Rise       ; Clk             ;
-;  ssd_SecU[2]  ; Clk        ; 5.364 ; 5.884 ; Rise       ; Clk             ;
-;  ssd_SecU[3]  ; Clk        ; 5.236 ; 5.608 ; Rise       ; Clk             ;
-;  ssd_SecU[4]  ; Clk        ; 5.513 ; 5.922 ; Rise       ; Clk             ;
-;  ssd_SecU[5]  ; Clk        ; 5.511 ; 5.935 ; Rise       ; Clk             ;
-;  ssd_SecU[6]  ; Clk        ; 5.789 ; 5.304 ; Rise       ; Clk             ;
+; ssd_HourT[*]  ; Clk        ; 6.721 ; 7.463 ; Rise       ; Clk             ;
+;  ssd_HourT[0] ; Clk        ; 6.721 ; 7.463 ; Rise       ; Clk             ;
+;  ssd_HourT[2] ; Clk        ; 5.936 ; 6.636 ; Rise       ; Clk             ;
+;  ssd_HourT[3] ; Clk        ; 6.514 ; 7.159 ; Rise       ; Clk             ;
+;  ssd_HourT[4] ; Clk        ; 5.637 ; 6.302 ; Rise       ; Clk             ;
+;  ssd_HourT[5] ; Clk        ; 5.960 ; 5.691 ; Rise       ; Clk             ;
+;  ssd_HourT[6] ; Clk        ; 6.009 ; 5.438 ; Rise       ; Clk             ;
+; ssd_HourU[*]  ; Clk        ; 7.134 ; 6.943 ; Rise       ; Clk             ;
+;  ssd_HourU[0] ; Clk        ; 5.886 ; 6.457 ; Rise       ; Clk             ;
+;  ssd_HourU[1] ; Clk        ; 5.767 ; 6.449 ; Rise       ; Clk             ;
+;  ssd_HourU[2] ; Clk        ; 6.114 ; 6.943 ; Rise       ; Clk             ;
+;  ssd_HourU[3] ; Clk        ; 5.933 ; 6.550 ; Rise       ; Clk             ;
+;  ssd_HourU[4] ; Clk        ; 5.868 ; 6.329 ; Rise       ; Clk             ;
+;  ssd_HourU[5] ; Clk        ; 5.993 ; 6.603 ; Rise       ; Clk             ;
+;  ssd_HourU[6] ; Clk        ; 7.134 ; 6.283 ; Rise       ; Clk             ;
+; ssd_MinT[*]   ; Clk        ; 6.556 ; 7.472 ; Rise       ; Clk             ;
+;  ssd_MinT[0]  ; Clk        ; 5.775 ; 6.202 ; Rise       ; Clk             ;
+;  ssd_MinT[1]  ; Clk        ; 6.540 ; 7.472 ; Rise       ; Clk             ;
+;  ssd_MinT[2]  ; Clk        ; 5.817 ; 6.132 ; Rise       ; Clk             ;
+;  ssd_MinT[3]  ; Clk        ; 5.794 ; 6.249 ; Rise       ; Clk             ;
+;  ssd_MinT[4]  ; Clk        ; 6.556 ; 7.469 ; Rise       ; Clk             ;
+;  ssd_MinT[5]  ; Clk        ; 5.868 ; 6.163 ; Rise       ; Clk             ;
+;  ssd_MinT[6]  ; Clk        ; 5.650 ; 6.101 ; Rise       ; Clk             ;
+; ssd_MinU[*]   ; Clk        ; 7.304 ; 7.807 ; Rise       ; Clk             ;
+;  ssd_MinU[0]  ; Clk        ; 6.425 ; 6.548 ; Rise       ; Clk             ;
+;  ssd_MinU[1]  ; Clk        ; 6.654 ; 6.963 ; Rise       ; Clk             ;
+;  ssd_MinU[2]  ; Clk        ; 7.304 ; 7.807 ; Rise       ; Clk             ;
+;  ssd_MinU[3]  ; Clk        ; 6.934 ; 7.266 ; Rise       ; Clk             ;
+;  ssd_MinU[4]  ; Clk        ; 6.833 ; 7.111 ; Rise       ; Clk             ;
+;  ssd_MinU[5]  ; Clk        ; 6.764 ; 7.007 ; Rise       ; Clk             ;
+;  ssd_MinU[6]  ; Clk        ; 6.876 ; 6.719 ; Rise       ; Clk             ;
+; ssd_SecT[*]   ; Clk        ; 6.689 ; 6.978 ; Rise       ; Clk             ;
+;  ssd_SecT[0]  ; Clk        ; 6.507 ; 6.718 ; Rise       ; Clk             ;
+;  ssd_SecT[1]  ; Clk        ; 6.584 ; 6.871 ; Rise       ; Clk             ;
+;  ssd_SecT[2]  ; Clk        ; 6.689 ; 6.835 ; Rise       ; Clk             ;
+;  ssd_SecT[3]  ; Clk        ; 6.635 ; 6.954 ; Rise       ; Clk             ;
+;  ssd_SecT[4]  ; Clk        ; 6.496 ; 6.978 ; Rise       ; Clk             ;
+;  ssd_SecT[5]  ; Clk        ; 6.603 ; 6.923 ; Rise       ; Clk             ;
+;  ssd_SecT[6]  ; Clk        ; 6.341 ; 6.579 ; Rise       ; Clk             ;
+; ssd_SecU[*]   ; Clk        ; 6.442 ; 6.947 ; Rise       ; Clk             ;
+;  ssd_SecU[0]  ; Clk        ; 6.170 ; 6.707 ; Rise       ; Clk             ;
+;  ssd_SecU[1]  ; Clk        ; 6.131 ; 6.880 ; Rise       ; Clk             ;
+;  ssd_SecU[2]  ; Clk        ; 6.225 ; 6.937 ; Rise       ; Clk             ;
+;  ssd_SecU[3]  ; Clk        ; 5.991 ; 6.307 ; Rise       ; Clk             ;
+;  ssd_SecU[4]  ; Clk        ; 6.442 ; 6.947 ; Rise       ; Clk             ;
+;  ssd_SecU[5]  ; Clk        ; 5.926 ; 6.573 ; Rise       ; Clk             ;
+;  ssd_SecU[6]  ; Clk        ; 5.734 ; 5.473 ; Rise       ; Clk             ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -859,53 +859,53 @@ No paths to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; ssd_HourT[*]  ; Clk        ; 4.652 ; 4.692 ; Rise       ; Clk             ;
-;  ssd_HourT[0] ; Clk        ; 5.535 ; 6.050 ; Rise       ; Clk             ;
-;  ssd_HourT[2] ; Clk        ; 4.756 ; 4.986 ; Rise       ; Clk             ;
-;  ssd_HourT[3] ; Clk        ; 5.359 ; 5.807 ; Rise       ; Clk             ;
-;  ssd_HourT[4] ; Clk        ; 4.652 ; 4.926 ; Rise       ; Clk             ;
-;  ssd_HourT[5] ; Clk        ; 5.118 ; 4.826 ; Rise       ; Clk             ;
-;  ssd_HourT[6] ; Clk        ; 4.965 ; 4.692 ; Rise       ; Clk             ;
-; ssd_HourU[*]  ; Clk        ; 4.759 ; 4.729 ; Rise       ; Clk             ;
-;  ssd_HourU[0] ; Clk        ; 4.794 ; 5.124 ; Rise       ; Clk             ;
-;  ssd_HourU[1] ; Clk        ; 4.988 ; 5.372 ; Rise       ; Clk             ;
-;  ssd_HourU[2] ; Clk        ; 4.964 ; 5.321 ; Rise       ; Clk             ;
-;  ssd_HourU[3] ; Clk        ; 4.759 ; 5.034 ; Rise       ; Clk             ;
-;  ssd_HourU[4] ; Clk        ; 5.014 ; 5.378 ; Rise       ; Clk             ;
-;  ssd_HourU[5] ; Clk        ; 4.821 ; 5.093 ; Rise       ; Clk             ;
-;  ssd_HourU[6] ; Clk        ; 5.011 ; 4.729 ; Rise       ; Clk             ;
-; ssd_MinT[*]   ; Clk        ; 4.744 ; 4.954 ; Rise       ; Clk             ;
-;  ssd_MinT[0]  ; Clk        ; 5.184 ; 5.600 ; Rise       ; Clk             ;
-;  ssd_MinT[1]  ; Clk        ; 5.137 ; 5.466 ; Rise       ; Clk             ;
-;  ssd_MinT[2]  ; Clk        ; 4.972 ; 5.190 ; Rise       ; Clk             ;
-;  ssd_MinT[3]  ; Clk        ; 4.947 ; 5.224 ; Rise       ; Clk             ;
-;  ssd_MinT[4]  ; Clk        ; 5.442 ; 5.851 ; Rise       ; Clk             ;
-;  ssd_MinT[5]  ; Clk        ; 4.998 ; 5.225 ; Rise       ; Clk             ;
-;  ssd_MinT[6]  ; Clk        ; 4.744 ; 4.954 ; Rise       ; Clk             ;
-; ssd_MinU[*]   ; Clk        ; 4.559 ; 4.710 ; Rise       ; Clk             ;
-;  ssd_MinU[0]  ; Clk        ; 4.559 ; 4.710 ; Rise       ; Clk             ;
-;  ssd_MinU[1]  ; Clk        ; 5.248 ; 5.674 ; Rise       ; Clk             ;
-;  ssd_MinU[2]  ; Clk        ; 5.386 ; 5.842 ; Rise       ; Clk             ;
-;  ssd_MinU[3]  ; Clk        ; 5.199 ; 5.599 ; Rise       ; Clk             ;
-;  ssd_MinU[4]  ; Clk        ; 4.944 ; 5.244 ; Rise       ; Clk             ;
-;  ssd_MinU[5]  ; Clk        ; 5.037 ; 5.398 ; Rise       ; Clk             ;
-;  ssd_MinU[6]  ; Clk        ; 5.154 ; 4.872 ; Rise       ; Clk             ;
-; ssd_SecT[*]   ; Clk        ; 4.733 ; 4.981 ; Rise       ; Clk             ;
-;  ssd_SecT[0]  ; Clk        ; 5.005 ; 5.315 ; Rise       ; Clk             ;
-;  ssd_SecT[1]  ; Clk        ; 4.733 ; 4.981 ; Rise       ; Clk             ;
-;  ssd_SecT[2]  ; Clk        ; 5.293 ; 5.764 ; Rise       ; Clk             ;
-;  ssd_SecT[3]  ; Clk        ; 5.148 ; 5.567 ; Rise       ; Clk             ;
-;  ssd_SecT[4]  ; Clk        ; 5.157 ; 5.479 ; Rise       ; Clk             ;
-;  ssd_SecT[5]  ; Clk        ; 5.270 ; 5.690 ; Rise       ; Clk             ;
-;  ssd_SecT[6]  ; Clk        ; 4.873 ; 5.179 ; Rise       ; Clk             ;
-; ssd_SecU[*]   ; Clk        ; 4.700 ; 4.820 ; Rise       ; Clk             ;
-;  ssd_SecU[0]  ; Clk        ; 4.777 ; 5.041 ; Rise       ; Clk             ;
-;  ssd_SecU[1]  ; Clk        ; 4.700 ; 4.905 ; Rise       ; Clk             ;
-;  ssd_SecU[2]  ; Clk        ; 4.907 ; 5.225 ; Rise       ; Clk             ;
-;  ssd_SecU[3]  ; Clk        ; 4.738 ; 5.002 ; Rise       ; Clk             ;
-;  ssd_SecU[4]  ; Clk        ; 4.920 ; 5.246 ; Rise       ; Clk             ;
-;  ssd_SecU[5]  ; Clk        ; 5.015 ; 5.345 ; Rise       ; Clk             ;
-;  ssd_SecU[6]  ; Clk        ; 5.100 ; 4.820 ; Rise       ; Clk             ;
+; ssd_HourT[*]  ; Clk        ; 5.279 ; 5.108 ; Rise       ; Clk             ;
+;  ssd_HourT[0] ; Clk        ; 6.026 ; 6.773 ; Rise       ; Clk             ;
+;  ssd_HourT[2] ; Clk        ; 5.570 ; 5.915 ; Rise       ; Clk             ;
+;  ssd_HourT[3] ; Clk        ; 5.845 ; 6.510 ; Rise       ; Clk             ;
+;  ssd_HourT[4] ; Clk        ; 5.279 ; 5.756 ; Rise       ; Clk             ;
+;  ssd_HourT[5] ; Clk        ; 5.412 ; 5.206 ; Rise       ; Clk             ;
+;  ssd_HourT[6] ; Clk        ; 5.522 ; 5.108 ; Rise       ; Clk             ;
+; ssd_HourU[*]  ; Clk        ; 5.294 ; 5.599 ; Rise       ; Clk             ;
+;  ssd_HourU[0] ; Clk        ; 5.367 ; 5.834 ; Rise       ; Clk             ;
+;  ssd_HourU[1] ; Clk        ; 5.294 ; 5.773 ; Rise       ; Clk             ;
+;  ssd_HourU[2] ; Clk        ; 5.638 ; 6.225 ; Rise       ; Clk             ;
+;  ssd_HourU[3] ; Clk        ; 5.356 ; 5.853 ; Rise       ; Clk             ;
+;  ssd_HourU[4] ; Clk        ; 5.423 ; 5.860 ; Rise       ; Clk             ;
+;  ssd_HourU[5] ; Clk        ; 5.438 ; 5.973 ; Rise       ; Clk             ;
+;  ssd_HourU[6] ; Clk        ; 6.201 ; 5.599 ; Rise       ; Clk             ;
+; ssd_MinT[*]   ; Clk        ; 5.143 ; 5.441 ; Rise       ; Clk             ;
+;  ssd_MinT[0]  ; Clk        ; 5.282 ; 5.616 ; Rise       ; Clk             ;
+;  ssd_MinT[1]  ; Clk        ; 5.851 ; 6.423 ; Rise       ; Clk             ;
+;  ssd_MinT[2]  ; Clk        ; 5.155 ; 5.560 ; Rise       ; Clk             ;
+;  ssd_MinT[3]  ; Clk        ; 5.195 ; 5.533 ; Rise       ; Clk             ;
+;  ssd_MinT[4]  ; Clk        ; 5.895 ; 6.427 ; Rise       ; Clk             ;
+;  ssd_MinT[5]  ; Clk        ; 5.185 ; 5.616 ; Rise       ; Clk             ;
+;  ssd_MinT[6]  ; Clk        ; 5.143 ; 5.441 ; Rise       ; Clk             ;
+; ssd_MinU[*]   ; Clk        ; 5.320 ; 5.184 ; Rise       ; Clk             ;
+;  ssd_MinU[0]  ; Clk        ; 5.320 ; 5.184 ; Rise       ; Clk             ;
+;  ssd_MinU[1]  ; Clk        ; 5.401 ; 5.874 ; Rise       ; Clk             ;
+;  ssd_MinU[2]  ; Clk        ; 5.925 ; 6.635 ; Rise       ; Clk             ;
+;  ssd_MinU[3]  ; Clk        ; 5.890 ; 5.861 ; Rise       ; Clk             ;
+;  ssd_MinU[4]  ; Clk        ; 5.731 ; 5.706 ; Rise       ; Clk             ;
+;  ssd_MinU[5]  ; Clk        ; 5.722 ; 5.654 ; Rise       ; Clk             ;
+;  ssd_MinU[6]  ; Clk        ; 5.873 ; 5.567 ; Rise       ; Clk             ;
+; ssd_SecT[*]   ; Clk        ; 5.364 ; 5.498 ; Rise       ; Clk             ;
+;  ssd_SecT[0]  ; Clk        ; 5.510 ; 5.715 ; Rise       ; Clk             ;
+;  ssd_SecT[1]  ; Clk        ; 5.593 ; 5.817 ; Rise       ; Clk             ;
+;  ssd_SecT[2]  ; Clk        ; 5.715 ; 5.950 ; Rise       ; Clk             ;
+;  ssd_SecT[3]  ; Clk        ; 5.644 ; 5.899 ; Rise       ; Clk             ;
+;  ssd_SecT[4]  ; Clk        ; 5.680 ; 5.945 ; Rise       ; Clk             ;
+;  ssd_SecT[5]  ; Clk        ; 5.663 ; 5.927 ; Rise       ; Clk             ;
+;  ssd_SecT[6]  ; Clk        ; 5.364 ; 5.498 ; Rise       ; Clk             ;
+; ssd_SecU[*]   ; Clk        ; 5.011 ; 4.873 ; Rise       ; Clk             ;
+;  ssd_SecU[0]  ; Clk        ; 5.412 ; 5.805 ; Rise       ; Clk             ;
+;  ssd_SecU[1]  ; Clk        ; 5.490 ; 5.904 ; Rise       ; Clk             ;
+;  ssd_SecU[2]  ; Clk        ; 5.506 ; 5.932 ; Rise       ; Clk             ;
+;  ssd_SecU[3]  ; Clk        ; 5.207 ; 5.494 ; Rise       ; Clk             ;
+;  ssd_SecU[4]  ; Clk        ; 5.659 ; 6.220 ; Rise       ; Clk             ;
+;  ssd_SecU[5]  ; Clk        ; 5.391 ; 5.871 ; Rise       ; Clk             ;
+;  ssd_SecU[6]  ; Clk        ; 5.011 ; 4.873 ; Rise       ; Clk             ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -920,10 +920,10 @@ No synchronizer chains to report.
 +------------------+----------+-------+----------+---------+---------------------+
 ; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -4.144   ; 0.170 ; N/A      ; N/A     ; -0.394              ;
-;  Clk             ; -4.144   ; 0.170 ; N/A      ; N/A     ; -0.394              ;
-; Design-wide TNS  ; -265.5   ; 0.0   ; 0.0      ; 0.0     ; -43.943             ;
-;  Clk             ; -265.500 ; 0.000 ; N/A      ; N/A     ; -43.943             ;
+; Worst-case Slack ; -4.729   ; 0.169 ; N/A      ; N/A     ; -0.394              ;
+;  Clk             ; -4.729   ; 0.169 ; N/A      ; N/A     ; -0.394              ;
+; Design-wide TNS  ; -279.623 ; 0.0   ; 0.0      ; 0.0     ; -42.44              ;
+;  Clk             ; -279.623 ; 0.000 ; N/A      ; N/A     ; -42.440             ;
 +------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -932,16 +932,16 @@ No synchronizer chains to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; ADJUST        ; Clk        ; 3.090 ; 3.457 ; Rise       ; Clk             ;
-; NEW_VALUE[*]  ; Clk        ; 2.752 ; 3.138 ; Rise       ; Clk             ;
-;  NEW_VALUE[0] ; Clk        ; 2.502 ; 2.759 ; Rise       ; Clk             ;
-;  NEW_VALUE[1] ; Clk        ; 2.501 ; 2.873 ; Rise       ; Clk             ;
-;  NEW_VALUE[2] ; Clk        ; 2.752 ; 3.138 ; Rise       ; Clk             ;
-;  NEW_VALUE[3] ; Clk        ; 2.521 ; 2.671 ; Rise       ; Clk             ;
-; SEL_EVENT     ; Clk        ; 0.986 ; 1.301 ; Rise       ; Clk             ;
-; SPEED_FAC[*]  ; Clk        ; 4.697 ; 4.683 ; Rise       ; Clk             ;
-;  SPEED_FAC[0] ; Clk        ; 4.697 ; 4.683 ; Rise       ; Clk             ;
-;  SPEED_FAC[1] ; Clk        ; 4.445 ; 4.492 ; Rise       ; Clk             ;
+; ADJUST        ; Clk        ; 2.672 ; 3.215 ; Rise       ; Clk             ;
+; ENTER_VALUE   ; Clk        ; 1.604 ; 2.092 ; Rise       ; Clk             ;
+; NEW_VALUE[*]  ; Clk        ; 3.345 ; 4.463 ; Rise       ; Clk             ;
+;  NEW_VALUE[0] ; Clk        ; 2.538 ; 3.034 ; Rise       ; Clk             ;
+;  NEW_VALUE[1] ; Clk        ; 2.492 ; 3.464 ; Rise       ; Clk             ;
+;  NEW_VALUE[2] ; Clk        ; 3.345 ; 4.463 ; Rise       ; Clk             ;
+;  NEW_VALUE[3] ; Clk        ; 2.726 ; 3.876 ; Rise       ; Clk             ;
+; SPEED_FAC[*]  ; Clk        ; 4.731 ; 5.031 ; Rise       ; Clk             ;
+;  SPEED_FAC[0] ; Clk        ; 4.255 ; 4.511 ; Rise       ; Clk             ;
+;  SPEED_FAC[1] ; Clk        ; 4.731 ; 5.031 ; Rise       ; Clk             ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -950,16 +950,16 @@ No synchronizer chains to report.
 +---------------+------------+--------+--------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +---------------+------------+--------+--------+------------+-----------------+
-; ADJUST        ; Clk        ; -0.135 ; -0.481 ; Rise       ; Clk             ;
-; NEW_VALUE[*]  ; Clk        ; 0.131  ; -0.115 ; Rise       ; Clk             ;
-;  NEW_VALUE[0] ; Clk        ; -0.385 ; -0.969 ; Rise       ; Clk             ;
-;  NEW_VALUE[1] ; Clk        ; 0.028  ; -0.302 ; Rise       ; Clk             ;
-;  NEW_VALUE[2] ; Clk        ; -0.183 ; -0.539 ; Rise       ; Clk             ;
-;  NEW_VALUE[3] ; Clk        ; 0.131  ; -0.115 ; Rise       ; Clk             ;
-; SEL_EVENT     ; Clk        ; 0.931  ; 0.575  ; Rise       ; Clk             ;
-; SPEED_FAC[*]  ; Clk        ; -0.512 ; -1.151 ; Rise       ; Clk             ;
-;  SPEED_FAC[0] ; Clk        ; -0.512 ; -1.151 ; Rise       ; Clk             ;
-;  SPEED_FAC[1] ; Clk        ; -0.568 ; -1.199 ; Rise       ; Clk             ;
+; ADJUST        ; Clk        ; 0.252  ; -0.035 ; Rise       ; Clk             ;
+; ENTER_VALUE   ; Clk        ; 0.357  ; -0.103 ; Rise       ; Clk             ;
+; NEW_VALUE[*]  ; Clk        ; -0.046 ; -0.554 ; Rise       ; Clk             ;
+;  NEW_VALUE[0] ; Clk        ; -0.401 ; -0.908 ; Rise       ; Clk             ;
+;  NEW_VALUE[1] ; Clk        ; -0.046 ; -0.554 ; Rise       ; Clk             ;
+;  NEW_VALUE[2] ; Clk        ; -0.720 ; -1.477 ; Rise       ; Clk             ;
+;  NEW_VALUE[3] ; Clk        ; -0.294 ; -0.840 ; Rise       ; Clk             ;
+; SPEED_FAC[*]  ; Clk        ; -0.049 ; -0.391 ; Rise       ; Clk             ;
+;  SPEED_FAC[0] ; Clk        ; -0.049 ; -0.391 ; Rise       ; Clk             ;
+;  SPEED_FAC[1] ; Clk        ; -0.361 ; -0.924 ; Rise       ; Clk             ;
 +---------------+------------+--------+--------+------------+-----------------+
 
 
@@ -968,53 +968,53 @@ No synchronizer chains to report.
 +---------------+------------+--------+--------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +---------------+------------+--------+--------+------------+-----------------+
-; ssd_HourT[*]  ; Clk        ; 10.372 ; 11.207 ; Rise       ; Clk             ;
-;  ssd_HourT[0] ; Clk        ; 10.372 ; 11.207 ; Rise       ; Clk             ;
-;  ssd_HourT[2] ; Clk        ; 9.212  ; 9.591  ; Rise       ; Clk             ;
-;  ssd_HourT[3] ; Clk        ; 10.035 ; 10.768 ; Rise       ; Clk             ;
-;  ssd_HourT[4] ; Clk        ; 8.475  ; 8.944  ; Rise       ; Clk             ;
-;  ssd_HourT[5] ; Clk        ; 9.755  ; 9.359  ; Rise       ; Clk             ;
-;  ssd_HourT[6] ; Clk        ; 9.019  ; 8.535  ; Rise       ; Clk             ;
-; ssd_HourU[*]  ; Clk        ; 9.668  ; 10.136 ; Rise       ; Clk             ;
-;  ssd_HourU[0] ; Clk        ; 9.172  ; 9.675  ; Rise       ; Clk             ;
-;  ssd_HourU[1] ; Clk        ; 9.526  ; 10.136 ; Rise       ; Clk             ;
-;  ssd_HourU[2] ; Clk        ; 9.544  ; 10.107 ; Rise       ; Clk             ;
-;  ssd_HourU[3] ; Clk        ; 9.155  ; 9.627  ; Rise       ; Clk             ;
-;  ssd_HourU[4] ; Clk        ; 9.549  ; 10.124 ; Rise       ; Clk             ;
-;  ssd_HourU[5] ; Clk        ; 9.316  ; 9.602  ; Rise       ; Clk             ;
-;  ssd_HourU[6] ; Clk        ; 9.668  ; 9.297  ; Rise       ; Clk             ;
-; ssd_MinT[*]   ; Clk        ; 10.487 ; 11.457 ; Rise       ; Clk             ;
-;  ssd_MinT[0]  ; Clk        ; 10.327 ; 11.004 ; Rise       ; Clk             ;
-;  ssd_MinT[1]  ; Clk        ; 10.265 ; 10.781 ; Rise       ; Clk             ;
-;  ssd_MinT[2]  ; Clk        ; 9.770  ; 9.866  ; Rise       ; Clk             ;
-;  ssd_MinT[3]  ; Clk        ; 9.870  ; 10.328 ; Rise       ; Clk             ;
-;  ssd_MinT[4]  ; Clk        ; 10.487 ; 11.457 ; Rise       ; Clk             ;
-;  ssd_MinT[5]  ; Clk        ; 9.714  ; 10.202 ; Rise       ; Clk             ;
-;  ssd_MinT[6]  ; Clk        ; 9.485  ; 9.902  ; Rise       ; Clk             ;
-; ssd_MinU[*]   ; Clk        ; 10.353 ; 11.131 ; Rise       ; Clk             ;
-;  ssd_MinU[0]  ; Clk        ; 9.199  ; 9.369  ; Rise       ; Clk             ;
-;  ssd_MinU[1]  ; Clk        ; 10.176 ; 10.670 ; Rise       ; Clk             ;
-;  ssd_MinU[2]  ; Clk        ; 10.353 ; 11.131 ; Rise       ; Clk             ;
-;  ssd_MinU[3]  ; Clk        ; 10.224 ; 10.914 ; Rise       ; Clk             ;
-;  ssd_MinU[4]  ; Clk        ; 9.977  ; 10.397 ; Rise       ; Clk             ;
-;  ssd_MinU[5]  ; Clk        ; 9.921  ; 10.492 ; Rise       ; Clk             ;
-;  ssd_MinU[6]  ; Clk        ; 10.194 ; 9.846  ; Rise       ; Clk             ;
-; ssd_SecT[*]   ; Clk        ; 10.074 ; 10.853 ; Rise       ; Clk             ;
-;  ssd_SecT[0]  ; Clk        ; 9.598  ; 10.058 ; Rise       ; Clk             ;
-;  ssd_SecT[1]  ; Clk        ; 9.354  ; 9.799  ; Rise       ; Clk             ;
-;  ssd_SecT[2]  ; Clk        ; 10.074 ; 10.853 ; Rise       ; Clk             ;
-;  ssd_SecT[3]  ; Clk        ; 9.563  ; 10.270 ; Rise       ; Clk             ;
-;  ssd_SecT[4]  ; Clk        ; 9.843  ; 10.384 ; Rise       ; Clk             ;
-;  ssd_SecT[5]  ; Clk        ; 10.010 ; 10.600 ; Rise       ; Clk             ;
-;  ssd_SecT[6]  ; Clk        ; 9.198  ; 9.693  ; Rise       ; Clk             ;
-; ssd_SecU[*]   ; Clk        ; 9.831  ; 10.099 ; Rise       ; Clk             ;
-;  ssd_SecU[0]  ; Clk        ; 9.273  ; 9.700  ; Rise       ; Clk             ;
-;  ssd_SecU[1]  ; Clk        ; 9.151  ; 9.409  ; Rise       ; Clk             ;
-;  ssd_SecU[2]  ; Clk        ; 9.361  ; 9.968  ; Rise       ; Clk             ;
-;  ssd_SecU[3]  ; Clk        ; 9.171  ; 9.619  ; Rise       ; Clk             ;
-;  ssd_SecU[4]  ; Clk        ; 9.531  ; 10.099 ; Rise       ; Clk             ;
-;  ssd_SecU[5]  ; Clk        ; 9.602  ; 10.066 ; Rise       ; Clk             ;
-;  ssd_SecU[6]  ; Clk        ; 9.831  ; 9.208  ; Rise       ; Clk             ;
+; ssd_HourT[*]  ; Clk        ; 11.268 ; 12.261 ; Rise       ; Clk             ;
+;  ssd_HourT[0] ; Clk        ; 11.268 ; 12.261 ; Rise       ; Clk             ;
+;  ssd_HourT[2] ; Clk        ; 10.235 ; 11.092 ; Rise       ; Clk             ;
+;  ssd_HourT[3] ; Clk        ; 10.930 ; 11.800 ; Rise       ; Clk             ;
+;  ssd_HourT[4] ; Clk        ; 9.490  ; 10.340 ; Rise       ; Clk             ;
+;  ssd_HourT[5] ; Clk        ; 10.370 ; 10.107 ; Rise       ; Clk             ;
+;  ssd_HourT[6] ; Clk        ; 10.007 ; 9.291  ; Rise       ; Clk             ;
+; ssd_HourU[*]  ; Clk        ; 11.745 ; 11.352 ; Rise       ; Clk             ;
+;  ssd_HourU[0] ; Clk        ; 9.963  ; 10.723 ; Rise       ; Clk             ;
+;  ssd_HourU[1] ; Clk        ; 9.978  ; 10.663 ; Rise       ; Clk             ;
+;  ssd_HourU[2] ; Clk        ; 10.391 ; 11.352 ; Rise       ; Clk             ;
+;  ssd_HourU[3] ; Clk        ; 10.096 ; 10.915 ; Rise       ; Clk             ;
+;  ssd_HourU[4] ; Clk        ; 10.050 ; 10.593 ; Rise       ; Clk             ;
+;  ssd_HourU[5] ; Clk        ; 10.171 ; 10.941 ; Rise       ; Clk             ;
+;  ssd_HourU[6] ; Clk        ; 11.745 ; 10.750 ; Rise       ; Clk             ;
+; ssd_MinT[*]   ; Clk        ; 11.199 ; 12.323 ; Rise       ; Clk             ;
+;  ssd_MinT[0]  ; Clk        ; 10.122 ; 10.511 ; Rise       ; Clk             ;
+;  ssd_MinT[1]  ; Clk        ; 11.077 ; 12.228 ; Rise       ; Clk             ;
+;  ssd_MinT[2]  ; Clk        ; 10.088 ; 10.428 ; Rise       ; Clk             ;
+;  ssd_MinT[3]  ; Clk        ; 9.949  ; 10.510 ; Rise       ; Clk             ;
+;  ssd_MinT[4]  ; Clk        ; 11.199 ; 12.323 ; Rise       ; Clk             ;
+;  ssd_MinT[5]  ; Clk        ; 10.193 ; 10.512 ; Rise       ; Clk             ;
+;  ssd_MinT[6]  ; Clk        ; 9.880  ; 10.349 ; Rise       ; Clk             ;
+; ssd_MinU[*]   ; Clk        ; 12.126 ; 12.764 ; Rise       ; Clk             ;
+;  ssd_MinU[0]  ; Clk        ; 10.841 ; 10.920 ; Rise       ; Clk             ;
+;  ssd_MinU[1]  ; Clk        ; 11.311 ; 11.704 ; Rise       ; Clk             ;
+;  ssd_MinU[2]  ; Clk        ; 12.126 ; 12.764 ; Rise       ; Clk             ;
+;  ssd_MinU[3]  ; Clk        ; 11.635 ; 12.015 ; Rise       ; Clk             ;
+;  ssd_MinU[4]  ; Clk        ; 11.611 ; 11.911 ; Rise       ; Clk             ;
+;  ssd_MinU[5]  ; Clk        ; 11.536 ; 11.767 ; Rise       ; Clk             ;
+;  ssd_MinU[6]  ; Clk        ; 11.553 ; 11.487 ; Rise       ; Clk             ;
+; ssd_SecT[*]   ; Clk        ; 11.301 ; 11.635 ; Rise       ; Clk             ;
+;  ssd_SecT[0]  ; Clk        ; 11.037 ; 11.269 ; Rise       ; Clk             ;
+;  ssd_SecT[1]  ; Clk        ; 11.021 ; 11.466 ; Rise       ; Clk             ;
+;  ssd_SecT[2]  ; Clk        ; 11.301 ; 11.346 ; Rise       ; Clk             ;
+;  ssd_SecT[3]  ; Clk        ; 11.161 ; 11.576 ; Rise       ; Clk             ;
+;  ssd_SecT[4]  ; Clk        ; 10.923 ; 11.635 ; Rise       ; Clk             ;
+;  ssd_SecT[5]  ; Clk        ; 11.148 ; 11.433 ; Rise       ; Clk             ;
+;  ssd_SecT[6]  ; Clk        ; 10.752 ; 11.032 ; Rise       ; Clk             ;
+; ssd_SecU[*]   ; Clk        ; 11.037 ; 11.628 ; Rise       ; Clk             ;
+;  ssd_SecU[0]  ; Clk        ; 10.587 ; 11.243 ; Rise       ; Clk             ;
+;  ssd_SecU[1]  ; Clk        ; 10.596 ; 11.510 ; Rise       ; Clk             ;
+;  ssd_SecU[2]  ; Clk        ; 10.657 ; 11.560 ; Rise       ; Clk             ;
+;  ssd_SecU[3]  ; Clk        ; 10.345 ; 10.687 ; Rise       ; Clk             ;
+;  ssd_SecU[4]  ; Clk        ; 11.037 ; 11.628 ; Rise       ; Clk             ;
+;  ssd_SecU[5]  ; Clk        ; 10.175 ; 10.953 ; Rise       ; Clk             ;
+;  ssd_SecU[6]  ; Clk        ; 9.921  ; 9.671  ; Rise       ; Clk             ;
 +---------------+------------+--------+--------+------------+-----------------+
 
 
@@ -1023,53 +1023,53 @@ No synchronizer chains to report.
 +---------------+------------+-------+-------+------------+-----------------+
 ; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +---------------+------------+-------+-------+------------+-----------------+
-; ssd_HourT[*]  ; Clk        ; 4.652 ; 4.692 ; Rise       ; Clk             ;
-;  ssd_HourT[0] ; Clk        ; 5.535 ; 6.050 ; Rise       ; Clk             ;
-;  ssd_HourT[2] ; Clk        ; 4.756 ; 4.986 ; Rise       ; Clk             ;
-;  ssd_HourT[3] ; Clk        ; 5.359 ; 5.807 ; Rise       ; Clk             ;
-;  ssd_HourT[4] ; Clk        ; 4.652 ; 4.926 ; Rise       ; Clk             ;
-;  ssd_HourT[5] ; Clk        ; 5.118 ; 4.826 ; Rise       ; Clk             ;
-;  ssd_HourT[6] ; Clk        ; 4.965 ; 4.692 ; Rise       ; Clk             ;
-; ssd_HourU[*]  ; Clk        ; 4.759 ; 4.729 ; Rise       ; Clk             ;
-;  ssd_HourU[0] ; Clk        ; 4.794 ; 5.124 ; Rise       ; Clk             ;
-;  ssd_HourU[1] ; Clk        ; 4.988 ; 5.372 ; Rise       ; Clk             ;
-;  ssd_HourU[2] ; Clk        ; 4.964 ; 5.321 ; Rise       ; Clk             ;
-;  ssd_HourU[3] ; Clk        ; 4.759 ; 5.034 ; Rise       ; Clk             ;
-;  ssd_HourU[4] ; Clk        ; 5.014 ; 5.378 ; Rise       ; Clk             ;
-;  ssd_HourU[5] ; Clk        ; 4.821 ; 5.093 ; Rise       ; Clk             ;
-;  ssd_HourU[6] ; Clk        ; 5.011 ; 4.729 ; Rise       ; Clk             ;
-; ssd_MinT[*]   ; Clk        ; 4.744 ; 4.954 ; Rise       ; Clk             ;
-;  ssd_MinT[0]  ; Clk        ; 5.184 ; 5.600 ; Rise       ; Clk             ;
-;  ssd_MinT[1]  ; Clk        ; 5.137 ; 5.466 ; Rise       ; Clk             ;
-;  ssd_MinT[2]  ; Clk        ; 4.972 ; 5.190 ; Rise       ; Clk             ;
-;  ssd_MinT[3]  ; Clk        ; 4.947 ; 5.224 ; Rise       ; Clk             ;
-;  ssd_MinT[4]  ; Clk        ; 5.442 ; 5.851 ; Rise       ; Clk             ;
-;  ssd_MinT[5]  ; Clk        ; 4.998 ; 5.225 ; Rise       ; Clk             ;
-;  ssd_MinT[6]  ; Clk        ; 4.744 ; 4.954 ; Rise       ; Clk             ;
-; ssd_MinU[*]   ; Clk        ; 4.559 ; 4.710 ; Rise       ; Clk             ;
-;  ssd_MinU[0]  ; Clk        ; 4.559 ; 4.710 ; Rise       ; Clk             ;
-;  ssd_MinU[1]  ; Clk        ; 5.248 ; 5.674 ; Rise       ; Clk             ;
-;  ssd_MinU[2]  ; Clk        ; 5.386 ; 5.842 ; Rise       ; Clk             ;
-;  ssd_MinU[3]  ; Clk        ; 5.199 ; 5.599 ; Rise       ; Clk             ;
-;  ssd_MinU[4]  ; Clk        ; 4.944 ; 5.244 ; Rise       ; Clk             ;
-;  ssd_MinU[5]  ; Clk        ; 5.037 ; 5.398 ; Rise       ; Clk             ;
-;  ssd_MinU[6]  ; Clk        ; 5.154 ; 4.872 ; Rise       ; Clk             ;
-; ssd_SecT[*]   ; Clk        ; 4.733 ; 4.981 ; Rise       ; Clk             ;
-;  ssd_SecT[0]  ; Clk        ; 5.005 ; 5.315 ; Rise       ; Clk             ;
-;  ssd_SecT[1]  ; Clk        ; 4.733 ; 4.981 ; Rise       ; Clk             ;
-;  ssd_SecT[2]  ; Clk        ; 5.293 ; 5.764 ; Rise       ; Clk             ;
-;  ssd_SecT[3]  ; Clk        ; 5.148 ; 5.567 ; Rise       ; Clk             ;
-;  ssd_SecT[4]  ; Clk        ; 5.157 ; 5.479 ; Rise       ; Clk             ;
-;  ssd_SecT[5]  ; Clk        ; 5.270 ; 5.690 ; Rise       ; Clk             ;
-;  ssd_SecT[6]  ; Clk        ; 4.873 ; 5.179 ; Rise       ; Clk             ;
-; ssd_SecU[*]   ; Clk        ; 4.700 ; 4.820 ; Rise       ; Clk             ;
-;  ssd_SecU[0]  ; Clk        ; 4.777 ; 5.041 ; Rise       ; Clk             ;
-;  ssd_SecU[1]  ; Clk        ; 4.700 ; 4.905 ; Rise       ; Clk             ;
-;  ssd_SecU[2]  ; Clk        ; 4.907 ; 5.225 ; Rise       ; Clk             ;
-;  ssd_SecU[3]  ; Clk        ; 4.738 ; 5.002 ; Rise       ; Clk             ;
-;  ssd_SecU[4]  ; Clk        ; 4.920 ; 5.246 ; Rise       ; Clk             ;
-;  ssd_SecU[5]  ; Clk        ; 5.015 ; 5.345 ; Rise       ; Clk             ;
-;  ssd_SecU[6]  ; Clk        ; 5.100 ; 4.820 ; Rise       ; Clk             ;
+; ssd_HourT[*]  ; Clk        ; 5.279 ; 5.108 ; Rise       ; Clk             ;
+;  ssd_HourT[0] ; Clk        ; 6.026 ; 6.773 ; Rise       ; Clk             ;
+;  ssd_HourT[2] ; Clk        ; 5.570 ; 5.915 ; Rise       ; Clk             ;
+;  ssd_HourT[3] ; Clk        ; 5.845 ; 6.510 ; Rise       ; Clk             ;
+;  ssd_HourT[4] ; Clk        ; 5.279 ; 5.756 ; Rise       ; Clk             ;
+;  ssd_HourT[5] ; Clk        ; 5.412 ; 5.206 ; Rise       ; Clk             ;
+;  ssd_HourT[6] ; Clk        ; 5.522 ; 5.108 ; Rise       ; Clk             ;
+; ssd_HourU[*]  ; Clk        ; 5.294 ; 5.599 ; Rise       ; Clk             ;
+;  ssd_HourU[0] ; Clk        ; 5.367 ; 5.834 ; Rise       ; Clk             ;
+;  ssd_HourU[1] ; Clk        ; 5.294 ; 5.773 ; Rise       ; Clk             ;
+;  ssd_HourU[2] ; Clk        ; 5.638 ; 6.225 ; Rise       ; Clk             ;
+;  ssd_HourU[3] ; Clk        ; 5.356 ; 5.853 ; Rise       ; Clk             ;
+;  ssd_HourU[4] ; Clk        ; 5.423 ; 5.860 ; Rise       ; Clk             ;
+;  ssd_HourU[5] ; Clk        ; 5.438 ; 5.973 ; Rise       ; Clk             ;
+;  ssd_HourU[6] ; Clk        ; 6.201 ; 5.599 ; Rise       ; Clk             ;
+; ssd_MinT[*]   ; Clk        ; 5.143 ; 5.441 ; Rise       ; Clk             ;
+;  ssd_MinT[0]  ; Clk        ; 5.282 ; 5.616 ; Rise       ; Clk             ;
+;  ssd_MinT[1]  ; Clk        ; 5.851 ; 6.423 ; Rise       ; Clk             ;
+;  ssd_MinT[2]  ; Clk        ; 5.155 ; 5.560 ; Rise       ; Clk             ;
+;  ssd_MinT[3]  ; Clk        ; 5.195 ; 5.533 ; Rise       ; Clk             ;
+;  ssd_MinT[4]  ; Clk        ; 5.895 ; 6.427 ; Rise       ; Clk             ;
+;  ssd_MinT[5]  ; Clk        ; 5.185 ; 5.616 ; Rise       ; Clk             ;
+;  ssd_MinT[6]  ; Clk        ; 5.143 ; 5.441 ; Rise       ; Clk             ;
+; ssd_MinU[*]   ; Clk        ; 5.320 ; 5.184 ; Rise       ; Clk             ;
+;  ssd_MinU[0]  ; Clk        ; 5.320 ; 5.184 ; Rise       ; Clk             ;
+;  ssd_MinU[1]  ; Clk        ; 5.401 ; 5.874 ; Rise       ; Clk             ;
+;  ssd_MinU[2]  ; Clk        ; 5.925 ; 6.635 ; Rise       ; Clk             ;
+;  ssd_MinU[3]  ; Clk        ; 5.890 ; 5.861 ; Rise       ; Clk             ;
+;  ssd_MinU[4]  ; Clk        ; 5.731 ; 5.706 ; Rise       ; Clk             ;
+;  ssd_MinU[5]  ; Clk        ; 5.722 ; 5.654 ; Rise       ; Clk             ;
+;  ssd_MinU[6]  ; Clk        ; 5.873 ; 5.567 ; Rise       ; Clk             ;
+; ssd_SecT[*]   ; Clk        ; 5.364 ; 5.498 ; Rise       ; Clk             ;
+;  ssd_SecT[0]  ; Clk        ; 5.510 ; 5.715 ; Rise       ; Clk             ;
+;  ssd_SecT[1]  ; Clk        ; 5.593 ; 5.817 ; Rise       ; Clk             ;
+;  ssd_SecT[2]  ; Clk        ; 5.715 ; 5.950 ; Rise       ; Clk             ;
+;  ssd_SecT[3]  ; Clk        ; 5.644 ; 5.899 ; Rise       ; Clk             ;
+;  ssd_SecT[4]  ; Clk        ; 5.680 ; 5.945 ; Rise       ; Clk             ;
+;  ssd_SecT[5]  ; Clk        ; 5.663 ; 5.927 ; Rise       ; Clk             ;
+;  ssd_SecT[6]  ; Clk        ; 5.364 ; 5.498 ; Rise       ; Clk             ;
+; ssd_SecU[*]   ; Clk        ; 5.011 ; 4.873 ; Rise       ; Clk             ;
+;  ssd_SecU[0]  ; Clk        ; 5.412 ; 5.805 ; Rise       ; Clk             ;
+;  ssd_SecU[1]  ; Clk        ; 5.490 ; 5.904 ; Rise       ; Clk             ;
+;  ssd_SecU[2]  ; Clk        ; 5.506 ; 5.932 ; Rise       ; Clk             ;
+;  ssd_SecU[3]  ; Clk        ; 5.207 ; 5.494 ; Rise       ; Clk             ;
+;  ssd_SecU[4]  ; Clk        ; 5.659 ; 6.220 ; Rise       ; Clk             ;
+;  ssd_SecU[5]  ; Clk        ; 5.391 ; 5.871 ; Rise       ; Clk             ;
+;  ssd_SecU[6]  ; Clk        ; 5.011 ; 4.873 ; Rise       ; Clk             ;
 +---------------+------------+-------+-------+------------+-----------------+
 
 
@@ -1128,8 +1128,6 @@ No synchronizer chains to report.
 +--------------+--------------+-----------------+-----------------+
 ; Pin          ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +--------------+--------------+-----------------+-----------------+
-; SEL          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; ENTER_VALUE  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ADJUST       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; NEW_VALUE[0] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; NEW_VALUE[3] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -1139,7 +1137,7 @@ No synchronizer chains to report.
 ; Rst          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SPEED_FAC[1] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SPEED_FAC[0] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SEL_EVENT    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ENTER_VALUE  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 +--------------+--------------+-----------------+-----------------+
 
 
@@ -1348,7 +1346,7 @@ No synchronizer chains to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; Clk        ; Clk      ; 17997    ; 0        ; 0        ; 0        ;
+; Clk        ; Clk      ; 17771    ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1358,7 +1356,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; Clk        ; Clk      ; 17997    ; 0        ; 0        ; 0        ;
+; Clk        ; Clk      ; 17771    ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1383,7 +1381,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 9     ; 9    ;
-; Unconstrained Input Port Paths  ; 268   ; 268  ;
+; Unconstrained Input Port Paths  ; 264   ; 264  ;
 ; Unconstrained Output Ports      ; 41    ; 41   ;
 ; Unconstrained Output Port Paths ; 136   ; 136  ;
 +---------------------------------+-------+------+
@@ -1395,7 +1393,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Feb 26 23:02:35 2025
+    Info: Processing started: Fri Feb 28 16:23:29 2025
 Info: Command: quartus_sta d_counter -c d_counter
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -1411,20 +1409,20 @@ Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.136
+Info (332146): Worst-case setup slack is -4.716
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.136            -265.500 Clk 
-Info (332146): Worst-case hold slack is 0.362
+    Info (332119):    -4.716            -279.623 Clk 
+Info (332146): Worst-case hold slack is 0.351
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.362               0.000 Clk 
+    Info (332119):     0.351               0.000 Clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -0.394
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394             -41.349 Clk 
+    Info (332119):    -0.394             -39.370 Clk 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 5CSEMA5F31C6 are preliminary
@@ -1432,20 +1430,20 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.144
+Info (332146): Worst-case setup slack is -4.729
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.144            -264.083 Clk 
-Info (332146): Worst-case hold slack is 0.383
+    Info (332119):    -4.729            -279.019 Clk 
+Info (332146): Worst-case hold slack is 0.336
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.383               0.000 Clk 
+    Info (332119):     0.336               0.000 Clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -0.394
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394             -43.943 Clk 
+    Info (332119):    -0.394             -42.440 Clk 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 5CSEMA5F31C6 are preliminary
@@ -1453,44 +1451,44 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -1.744
+Info (332146): Worst-case setup slack is -2.227
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.744            -108.509 Clk 
-Info (332146): Worst-case hold slack is 0.178
+    Info (332119):    -2.227            -121.538 Clk 
+Info (332146): Worst-case hold slack is 0.177
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.178               0.000 Clk 
+    Info (332119):     0.177               0.000 Clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -0.092
+Info (332146): Worst-case minimum pulse width slack is -0.091
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.092              -6.989 Clk 
+    Info (332119):    -0.091              -6.480 Clk 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -1.564
+Info (332146): Worst-case setup slack is -2.016
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.564             -95.042 Clk 
-Info (332146): Worst-case hold slack is 0.170
+    Info (332119):    -2.016            -108.183 Clk 
+Info (332146): Worst-case hold slack is 0.169
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.170               0.000 Clk 
+    Info (332119):     0.169               0.000 Clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -0.090
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.090              -6.892 Clk 
+    Info (332119):    -0.090              -6.491 Clk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4929 megabytes
-    Info: Processing ended: Wed Feb 26 23:02:42 2025
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 4933 megabytes
+    Info: Processing ended: Fri Feb 28 16:23:39 2025
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:09
 
 
