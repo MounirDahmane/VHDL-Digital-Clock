@@ -7,14 +7,14 @@ use work.utils.all; -- INCLUDES THE SSD DRIVER FUNCTION : integer_to_SSD
 Entity d_counter is
 
 	GENERIC( N 	  : INTEGER := 5;
-				fclk : INTEGER := 50_000_000);
+			 fclk : INTEGER := 50_000_000);
 	Port(
 		Clk, Rst  	: IN  STD_LOGIC;
 		
 		SPEED_FAC 	: IN  STD_LOGIC_VECTOR(1 DOWNTO 0); -- TO ADJUST THE SPEED OF THE CLOCK, IT HELPS ON VISUALING THE HOURS, AND MINUTES
-		NEW_VALUE	: IN 	STD_LOGIC_VECTOR(3 DOWNTO 0); -- THE GIVEN VALUE FOR THE DIGITAL CLOCK ON SSD's WHEN SETTING THEM
-		ADJUST	 	: IN  STD_logic;							-- TO ENTER ADJUSTING MODE 
-		ENTER_VALUE : IN  STD_LOGIC;							-- A KEY USED TO ENTER THE NEW_VALUE AND TRANSLATING TO THE NEXT STATE WHEN PRESSED
+		NEW_VALUE	: IN  STD_LOGIC_VECTOR(3 DOWNTO 0); -- THE GIVEN VALUE FOR THE DIGITAL CLOCK ON SSD's WHEN SETTING THEM
+		ADJUST	 	: IN  STD_logic;					-- TO ENTER ADJUSTING MODE 
+		ENTER_VALUE : IN  STD_LOGIC;					-- A KEY USED TO ENTER THE NEW_VALUE AND TRANSLATING TO THE NEXT STATE WHEN PRESSED
 		
 		ssd_SecU  	: OUT STD_logic_VECTOR(6 DOWNTO 0);	-- SSD[0] OF THE FPGA ==> DE1 IN MY CASE
 		ssd_SecT  	: OUT STD_logic_VECTOR(6 DOWNTO 0);	-- SSD[1] OF THE FPGA ==> DE1 IN MY CASE
@@ -46,14 +46,14 @@ Architecture arch of d_counter is
 
 BEGIN
 	-- SETTING THE SPEED OF THE CLOCK
-	limit <= fclk 		 when SPEED_FAC = "00" ELSE
-				fclk/2048 when SPEED_FAC = "01" ELSE
-				fclk/4096 when SPEED_FAC = "10" ELSE
-				fclk/8192;
+	limit <= fclk 	   when SPEED_FAC = "00" ELSE
+			 fclk/2048 when SPEED_FAC = "01" ELSE
+			 fclk/4096 when SPEED_FAC = "10" ELSE
+			 fclk/8192;
 	
 	-- CLK DIVIDER ==> FOR GENERATING ONE SECOND DELAY
 	PROCESS(CLK, RST)
-   BEGIN
+    BEGIN
 		IF(RST = '0') THEN 
 			Qin <= (OTHERS => '0');
 		ELSIF(RISING_EDGE(CLK)) THEN
@@ -63,25 +63,25 @@ BEGIN
 				Qin <= (OTHERS => '0');
 			END IF;
 		END IF;
-   END PROCESS;
+    END PROCESS;
 	
 	PROCESS(CLK, RST)
 		VARIABLE one_s : NATURAL RANGE 0 to fclk; -- THE ONE SECOND OF THE CLOCK, DEPENDING ON THE LIMIT FACTOR
-		VARIABLE SecU	: NATURAL RANGE 0 to 10;
-		VARIABLE SecT 	: NATURAL RANGE 0 to 6 ;
-		VARIABLE MinU 	: NATURAL RANGE 0 to 10;
+		VARIABLE SecU  : NATURAL RANGE 0 to 10;
+		VARIABLE SecT  : NATURAL RANGE 0 to 6 ;
+		VARIABLE MinU  : NATURAL RANGE 0 to 10;
 		VARIABLE MinT  : NATURAL RANGE 0 to 6 ;
-		VARIABLE HourU	: NATURAL RANGE 0 to 10;
-		VARIABLE HourT	: NATURAL RANGE 0 to 3 ;
-		VARIABLE delay : BOOLEAN;						-- TO HANDLE THE DEBOUNCING OF THE KEY ie. THE ENTER_VALUE KEY
+		VARIABLE HourU : NATURAL RANGE 0 to 10;
+		VARIABLE HourT : NATURAL RANGE 0 to 3 ;
+		VARIABLE delay : BOOLEAN;				  -- TO HANDLE THE DEBOUNCING OF THE KEY ie. THE ENTER_VALUE KEY
 		
 	BEGIN
 		IF(RST = '0') THEN
-			delay := FALSE;
-			one_s := 0;	PS <= IDLE;
-			SecU	:= 0;	SecT 	:= 0;
-			MinU 	:= 0;	MinT  := 0;
-			HourU	:= 0;	HourT	:= 0;
+			PS <= IDLE;
+			one_s := 0;	delay := FALSE;
+			SecU  := 0;	SecT  := 0;
+			MinU  := 0;	MinT  := 0;
+			HourU := 0;	HourT := 0;
 			
 		ELSIF(RISING_EDGE(Clk)) THEN -- (CLK'Event and CLK = '1')
 		
@@ -146,6 +146,6 @@ BEGIN
 	ssd_MinU  <= integer_to_SSD(MinUnits );
 	ssd_MinT  <= integer_to_SSD(MinTens  );
 	ssd_HourU <= integer_to_SSD(HourUnits);
-	ssd_HourT <= integer_to_SSD(HourTens);
+	ssd_HourT <= integer_to_SSD(HourTens );
 	
 END arch;
