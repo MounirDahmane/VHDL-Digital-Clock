@@ -7,21 +7,21 @@ use work.utils.all; -- INCLUDES THE SSD DRIVER FUNCTION : integer_to_SSD
 Entity d_counter is
 
 	GENERIC( N 	  : INTEGER := 5;
-			 fclk : INTEGER := 50_000_000);
+		 fclk 	  : INTEGER := 50_000_000);
 	Port(
-		Clk, Rst  	: IN  STD_LOGIC;
+		Clk, Rst    : IN  STD_LOGIC;
 		
-		SPEED_FAC 	: IN  STD_LOGIC_VECTOR(1 DOWNTO 0); -- TO ADJUST THE SPEED OF THE CLOCK, IT HELPS ON VISUALING THE HOURS, AND MINUTES
-		NEW_VALUE	: IN  STD_LOGIC_VECTOR(3 DOWNTO 0); -- THE GIVEN VALUE FOR THE DIGITAL CLOCK ON SSD's WHEN SETTING THEM
-		ADJUST	 	: IN  STD_logic;					-- TO ENTER ADJUSTING MODE 
-		ENTER_VALUE : IN  STD_LOGIC;					-- A KEY USED TO ENTER THE NEW_VALUE AND TRANSLATING TO THE NEXT STATE WHEN PRESSED
+		SPEED_FAC   : IN  STD_LOGIC_VECTOR(1 DOWNTO 0); -- TO ADJUST THE SPEED OF THE CLOCK, IT HELPS ON VISUALING THE HOURS, AND MINUTES
+		NEW_VALUE   : IN  STD_LOGIC_VECTOR(3 DOWNTO 0); -- THE GIVEN VALUE FOR THE DIGITAL CLOCK ON SSD's WHEN SETTING THEM
+		ADJUST	    : IN  STD_logic;		    -- TO ENTER ADJUSTING MODE 
+		ENTER_VALUE : IN  STD_LOGIC;		    -- A KEY USED TO ENTER THE NEW_VALUE AND TRANSLATING TO THE NEXT STATE WHEN PRESSED
 		
-		ssd_SecU  	: OUT STD_logic_VECTOR(6 DOWNTO 0);	-- SSD[0] OF THE FPGA ==> DE1 IN MY CASE
-		ssd_SecT  	: OUT STD_logic_VECTOR(6 DOWNTO 0);	-- SSD[1] OF THE FPGA ==> DE1 IN MY CASE
-		ssd_MinU  	: OUT STD_logic_VECTOR(6 DOWNTO 0);	-- SSD[2] OF THE FPGA ==> DE1 IN MY CASE
-		ssd_MinT  	: OUT STD_logic_VECTOR(6 DOWNTO 0);	-- SSD[3] OF THE FPGA ==> DE1 IN MY CASE
-		ssd_HourU 	: OUT STD_logic_VECTOR(6 DOWNTO 0);	-- SSD[4] OF THE FPGA ==> DE1 IN MY CASE
-		ssd_HourT 	: OUT STD_logic_VECTOR(6 DOWNTO 0) 	-- SSD[5] OF THE FPGA ==> DE1 IN MY CASE
+		ssd_SecU    : OUT STD_logic_VECTOR(6 DOWNTO 0); -- SSD[0] OF THE FPGA ==> DE1 IN MY CASE
+		ssd_SecT    : OUT STD_logic_VECTOR(6 DOWNTO 0); -- SSD[1] OF THE FPGA ==> DE1 IN MY CASE
+		ssd_MinU    : OUT STD_logic_VECTOR(6 DOWNTO 0); -- SSD[2] OF THE FPGA ==> DE1 IN MY CASE
+		ssd_MinT    : OUT STD_logic_VECTOR(6 DOWNTO 0); -- SSD[3] OF THE FPGA ==> DE1 IN MY CASE
+		ssd_HourU   : OUT STD_logic_VECTOR(6 DOWNTO 0); -- SSD[4] OF THE FPGA ==> DE1 IN MY CASE
+		ssd_HourT   : OUT STD_logic_VECTOR(6 DOWNTO 0)  -- SSD[5] OF THE FPGA ==> DE1 IN MY CASE
 	);
 END Entity;
 
@@ -29,12 +29,12 @@ END Entity;
 Architecture arch of d_counter is
 	
 	Signal Qin       : UNSIGNED(25 DOWNTO 0);
-	Signal SecUnits  : INTEGER RANGE 0 to 10 ;
-	Signal SecTens   : INTEGER RANGE 0 to 6  ;
-	Signal MinUnits  : INTEGER RANGE 0 to 10 ;
-	Signal MinTens   : INTEGER RANGE 0 to 6;
+	Signal SecUnits  : INTEGER RANGE 0 to 10;
+	Signal SecTens   : INTEGER RANGE 0 to 6 ;
+	Signal MinUnits  : INTEGER RANGE 0 to 10;
+	Signal MinTens   : INTEGER RANGE 0 to 6 ;
 	Signal HourUnits : INTEGER RANGE 0 to 10;
-	Signal HourTens  : INTEGER RANGE 0 to 3;
+	Signal HourTens  : INTEGER RANGE 0 to 3 ;
 	Signal limit     : INTEGER RANGE 0 TO fclk;
 	
 	
@@ -47,13 +47,13 @@ Architecture arch of d_counter is
 BEGIN
 	-- SETTING THE SPEED OF THE CLOCK
 	limit <= fclk 	   when SPEED_FAC = "00" ELSE
-			 fclk/2048 when SPEED_FAC = "01" ELSE
-			 fclk/4096 when SPEED_FAC = "10" ELSE
-			 fclk/8192;
+	 	 fclk/2048 when SPEED_FAC = "01" ELSE
+	         fclk/4096 when SPEED_FAC = "10" ELSE
+		 fclk/8192;
 	
 	-- CLK DIVIDER ==> FOR GENERATING ONE SECOND DELAY
 	PROCESS(CLK, RST)
-    BEGIN
+    	BEGIN
 		IF(RST = '0') THEN 
 			Qin <= (OTHERS => '0');
 		ELSIF(RISING_EDGE(CLK)) THEN
@@ -63,17 +63,17 @@ BEGIN
 				Qin <= (OTHERS => '0');
 			END IF;
 		END IF;
-    END PROCESS;
+    	END PROCESS;
 	
 	PROCESS(CLK, RST)
-		VARIABLE one_s : NATURAL RANGE 0 to fclk; -- THE ONE SECOND OF THE CLOCK, DEPENDING ON THE LIMIT FACTOR
+		VARIABLE one_s : NATURAL RANGE 0 to fclk; -- THE "ONE SECOND" OF THE CLOCK, DEPENDING ON THE LIMIT FACTOR
 		VARIABLE SecU  : NATURAL RANGE 0 to 10;
 		VARIABLE SecT  : NATURAL RANGE 0 to 6 ;
 		VARIABLE MinU  : NATURAL RANGE 0 to 10;
 		VARIABLE MinT  : NATURAL RANGE 0 to 6 ;
 		VARIABLE HourU : NATURAL RANGE 0 to 10;
 		VARIABLE HourT : NATURAL RANGE 0 to 3 ;
-		VARIABLE delay : BOOLEAN;				  -- TO HANDLE THE DEBOUNCING OF THE KEY ie. THE ENTER_VALUE KEY
+		VARIABLE delay : BOOLEAN;		  -- TO HANDLE THE DEBOUNCING OF THE KEY ie. THE ENTER_VALUE KEY
 		
 	BEGIN
 		IF(RST = '0') THEN
@@ -132,12 +132,12 @@ BEGIN
 			END IF;
 		END IF;
 		
-		SecUnits  <= SecU	;
+		SecUnits  <= SecU ;
 		SecTens   <= SecT ;	
 		MinUnits  <= MinU ;	
 		MinTens   <= MinT ;
 		HourUnits <= HourU;	
-		HourTens <= HourT;	
+		HourTens  <= HourT;	
 	
 	END PROCESS;
 	
