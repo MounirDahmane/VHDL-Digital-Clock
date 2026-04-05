@@ -1,17 +1,14 @@
-# Quartus-generated files
-incremental_db/
+# Quartus
 db/
-hc_output/
-
-*.names_drv_tbl
-
+incremental_db/
 output_files/
-
-*.qsf
-*.qpf
+hc_output/
+*.rpt
+*.summary
 *.qws
-
-# Temporary files
 *.bak
-*.tmp
-*.log
+
+# Logs
+*.txt
+*.done
+*.smsg
